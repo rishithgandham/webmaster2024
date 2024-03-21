@@ -35,7 +35,10 @@ body, #root {
   content: '';
   width: calc((100vw/2) - 200px);
   height: 100vh;
-  background: red url('/landing_solar.jpg') no-repeat calc(100vw/2) 0px fixed;
+  background: red
+    url('../public/landing_solar.jpg')
+    no-repeat calc(100vw/2) 0px fixed;
+  
   background-size: cover;
   top: 0px;
   right: 0px;
@@ -45,19 +48,24 @@ body, #root {
 
 .solar {
   background: url('../public/solar.avif');
-  background-size: cover;
+  background-size:  cover;
   background-repeat: no-repeat;
+
+  
 }
+
 
 .geothermal {
   background: url('../public/geothermal.avif');
-  background-size: cover;
+  background-size:  cover;
   background-repeat: no-repeat;
+
+  
 }
 
 .wind {
   background: url('../public/wind.webp');
-  background-size: cover;
+  background-size:  cover;
   background-repeat: no-repeat;
 }
 
