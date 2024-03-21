@@ -30,13 +30,13 @@ body {
 body, #root {
   height: 100vh;
 }
-
+/* 
 .landing::after {
   content: '';
   width: calc((100vw/2) - 200px);
   height: 100vh;
   background: red
-    url('../public/landing_solar.jpg')
+    url('/landing_solar.jpg')
     no-repeat calc(100vw/2) 0px fixed;
   
   background-size: cover;
@@ -47,7 +47,7 @@ body, #root {
 }
 
 .solar {
-  background: url('../public/solar.avif');
+  background: url('/solar.avif');
   background-size:  cover;
   background-repeat: no-repeat;
 
@@ -56,7 +56,7 @@ body, #root {
 
 
 .geothermal {
-  background: url('../public/geothermal.avif');
+  background: url('/geothermal.avif');
   background-size:  cover;
   background-repeat: no-repeat;
 
@@ -64,10 +64,10 @@ body, #root {
 }
 
 .wind {
-  background: url('../public/wind.webp');
+  background: url('./wind.webp');
   background-size:  cover;
   background-repeat: no-repeat;
-}
+} */
 
 @layer components {
   .green-gradient {

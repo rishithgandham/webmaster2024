@@ -1,11 +1,12 @@
 import logo from './logo.svg';
 import './App.css'
+import { Link } from 'react-router-dom';
 
 function App() {
   return (
     <>
       <main className=" min-h-screen  h-full w-full bg-gradient-to-b from-black to-slate-950 text-white ">
-        <div className="flex justify-center flex-col w-full h-full lg:px-36 md:px-20 px-10 xl:px-72  landing">
+        <div className="flex justify-center flex-col w-full h-full lg:px-36 md:px-20 px-10 xl:px-72  ">
           <p className="text-5xl font-bold green-gradient pb-5">Green Energy</p>
           <p className="text-lg  font-bold">
             TSA WEBMASTER 2024 - Hampton, Virginia
@@ -35,15 +36,15 @@ function EnergyTypes() {
           <>
             <div
               // href={e.link}
-              className={`grid rounded-md shadow-xl h-screen  grid-rows-2 p-10 ${e.img_class} group transition-all ease-in-out hover:scale-x-[102%] border border-white`}
+              className={`grid rounded-md shadow-xl h-screen  grid-rows-2 p-10  group transition-all ease-in-out hover:scale-x-[102%] border border-white`}
             >
               <div className="flex items-end justify-center">
                 <p className="text-3xl font-bold text-center ">{e.name}</p>
               </div>
               <div className="  mb-2 hidden group-hover:flex items-start justify-center">
-                <button className="  text-sm mt-3 border  border-white px-5 py-2 hover:bg-opacity-45 hover:bg-white  transition-all ease-in-out">
+                <Link to={e.link} className="  text-sm mt-3 border  border-white px-5 py-2 hover:bg-opacity-45 hover:bg-white  transition-all ease-in-out">
                   Learn More
-                </button>
+                </Link>
               </div>
             </div>
           </>
@@ -57,7 +58,7 @@ let energy_types = [
   {
     name: 'Solar Energy',
     img_class: 'solar',
-    link: '#',
+    link: '/solar',
   },
   {
     name: 'Wind Energy',
