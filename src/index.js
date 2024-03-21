@@ -6,7 +6,7 @@ import reportWebVitals from './reportWebVitals';
 
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Solar from './pages/solar';
-
+import Wind from './pages/wind';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
@@ -14,6 +14,7 @@ root.render(
       <Routes>
         <Route path="/" element={<App/>}/>
         <Route path='/solar' element={<Solar/>}/>
+        <Route path='/wind' element={<Wind/>}/>
       </Routes>
     </BrowserRouter>
   </React.StrictMode>
