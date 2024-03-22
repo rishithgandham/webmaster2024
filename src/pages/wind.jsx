@@ -1,14 +1,62 @@
 import React from "react";
+import { motion } from "framer-motion";
 
 const Wind = () => {
+  const variants = {
+    hidden: { opacity: 0, y: 50 },
+    visible: { opacity: 1, y: 0, transition: { duration: 1 } },
+  };
+  // Dummy data for wind energy sources
+  const windEnergySources = [
+    { name: "Wind Farm 1", location: { lat: 51.5074, lng: -0.1278 } },
+    { name: "Wind Farm 2", location: { lat: 40.7128, lng: -74.006 } },
+    { name: "Wind Farm 3", location: { lat: -33.8688, lng: 151.2093 } },
+    // Add more wind energy sources as needed
+  ];
+
+  // Dummy checkout process
+  const handleCheckout = () => {
+    // Perform checkout process (this is just a dummy function)
+    console.log("Checkout process initiated...");
+  };
   return (
     <>
       <main className="min-h-screen bg-gradient-to-b from-black to-slate-950 text-white">
         <div className="flex flex-col lg:px-52 md:px-20 px-10 xl:px-96 py-28">
-          <div className="title text-4xl font-extrabold">Wind Energy for Homes</div>
-          {/* Overview */}
-          <div className="text-3xl font-bold pt-20">Overview</div>
-          <div className="text-lg font-semibold pt-10">
+          <div class="container mx-auto py-8 px-4">
+            <div class="flex justify-between items-center">
+              <div class="title text-4xl font-extrabold">
+                <motion.div
+                  variants={variants}
+                  initial="hidden"
+                  animate="visible"
+                >
+                  Wind Energy for Homes
+                </motion.div>
+              </div>
+              <div class="image w-1/4 ml-8">
+                <img
+                  src="/src/pages/logo.png"
+                  alt="logo"
+                  class="w-full h-auto"
+                />
+              </div>
+            </div>
+          </div>
+          <motion.div
+            variants={variants}
+            initial="hidden"
+            animate="visible"
+            className="text-3xl font-bold pt-20"
+          >
+            Overview
+          </motion.div>
+          <motion.div
+            variants={variants}
+            initial="hidden"
+            animate="visible"
+            className="text-lg font-semibold pt-10"
+          >
             Wind energy is an important component of the renewable energy
             sector, harnessing the natural power of the wind to generate
             electricity using wind turbines. According to the International
@@ -28,32 +76,57 @@ const Wind = () => {
             (LCOE) compared to traditional fossil fuels. Furthermore, federal
             tax credits and state incentives, along with lower turbine costs,
             have made wind energy more accessible and financially viable.
-          </div>
-          <div className="text-3xl font-bold pt-20">
+          </motion.div>
+          <motion.div
+            variants={variants}
+            initial="hidden"
+            animate="visible"
+            className="text-3xl font-bold pt-20"
+          >
             Advantages Of Wind Power In Renewable Energy Production
-          </div>
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 pt-10">
-            <div>
+          </motion.div>
+          <motion.div
+            variants={variants}
+            initial="hidden"
+            animate="visible"
+            className="grid grid-cols-1 lg:grid-cols-2 gap-10 pt-10"
+          >
+            <motion.div
+              variants={variants}
+              initial="hidden"
+              animate="visible"
+              className="border border-gray-300 rounded-lg p-6"
+            >
               <div className="text-2xl">Abundant and Renewable</div>
-              <div className="text-2xl pt-4">
+              <div className="text-lg pt-4">
                 Wind energy is obtained from the natural movement of air masses,
                 making it a virtually infinite supply. Wind energy will be
                 accessible to capture as long as the sun continues to heat the
                 Earth's surface unevenly, resulting in wind patterns.
               </div>
-            </div>
-            <div>
+            </motion.div>
+            <motion.div
+              variants={variants}
+              initial="hidden"
+              animate="visible"
+              className="border border-gray-300 rounded-lg p-6"
+            >
               <div className="text-2xl">Clean and Environmentally Friendly</div>
-              <div className="text-2xl pt-4">
+              <div className="text-lg pt-4">
                 Wind power generating emits no greenhouse gases, air pollutants,
                 or water pollutants during operation. It dramatically decreases
                 dependency on fossil fuels, lowering air pollution, addressing
                 climate change, and protecting ecosystems and biodiversity.
               </div>
-            </div>
-            <div>
+            </motion.div>
+            <motion.div
+              variants={variants}
+              initial="hidden"
+              animate="visible"
+              className="border border-gray-300 rounded-lg p-6"
+            >
               <div className="text-2xl">Cost-Effective</div>
-              <div className="text-2xl pt-4">
+              <div className="text-lg pt-4">
                 Wind energy has become much more affordable in recent years
                 thanks to technological improvements, economies of scale, and
                 simplified manufacturing processes. Wind power is presently one
@@ -61,20 +134,30 @@ const Wind = () => {
                 frequently similar to or even less expensive than fossil fuels
                 in many areas.
               </div>
-            </div>
-            <div>
+            </motion.div>
+            <motion.div
+              variants={variants}
+              initial="hidden"
+              animate="visible"
+              className="border border-gray-300 rounded-lg p-6"
+            >
               <div className="text-2xl">Energy Independence and Security</div>
-              <div className="text-2xl pt-4">
+              <div className="text-lg pt-4">
                 Wind energy is a decentralized energy source that enables towns,
                 regions, and countries to diversify their energy portfolios and
                 lessen their reliance on imported fossil fuels. This improves
                 energy security, resilience, and stability while lowering
                 vulnerability to geopolitical tensions and supply interruptions.
               </div>
-            </div>
-            <div>
+            </motion.div>
+            <motion.div
+              variants={variants}
+              initial="hidden"
+              animate="visible"
+              className="border border-gray-300 rounded-lg p-6"
+            >
               <div className="text-2xl">Job Creation and Economic Benefits</div>
-              <div className="text-2xl pt-4">
+              <div className="text-lg pt-4">
                 The wind energy industry supports a wide range of jobs across
                 various sectors, including manufacturing, construction,
                 installation, operations, maintenance, and research. Wind power
@@ -82,10 +165,15 @@ const Wind = () => {
                 revenues, land lease payments, and community development
                 initiatives.
               </div>
-            </div>
-            <div>
+            </motion.div>
+            <motion.div
+              variants={variants}
+              initial="hidden"
+              animate="visible"
+              className="border border-gray-300 rounded-lg p-6"
+            >
               <div className="text-2xl">Scalability and Flexibility</div>
-              <div className="text-2xl pt-4">
+              <div className="text-lg pt-4">
                 Wind power projects can range from small-scale installations for
                 individual homes or businesses to massive utility-scale wind
                 farms that cover extensive regions. This flexibility enables
@@ -93,12 +181,17 @@ const Wind = () => {
                 constraints, while also complementing other renewable energy
                 sources like solar and hydroelectric power.
               </div>
-            </div>
-            <div>
+            </motion.div>
+            <motion.div
+              variants={variants}
+              initial="hidden"
+              animate="visible"
+              className="border border-gray-300 rounded-lg p-6"
+            >
               <div className="text-2xl">
                 Technological Innovation and Growth Potential
               </div>
-              <div className="text-2xl pt-4">
+              <div className="text-lg pt-4">
                 Continued research and development in wind energy technology
                 promises to enhance efficiency, dependability, and energy
                 output. Offshore wind, in particular, has enormous growth
@@ -106,15 +199,30 @@ const Wind = () => {
                 resources near coastal locations, allowing for the construction
                 of large-scale wind farms with minimum land use effect.
               </div>
-            </div>
-          </div>
-          <div className="text-3xl font-semibold pt-20">
+            </motion.div>
+          </motion.div>
+          <motion.div
+            variants={variants}
+            initial="hidden"
+            animate="visible"
+            className="text-3xl font-bold pt-20"
+          >
             Information On Wind Turbines
-          </div>
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 pt-10">
-            <div>
+          </motion.div>
+          <motion.div
+            variants={variants}
+            initial="hidden"
+            animate="visible"
+            className="grid grid-cols-1 lg:grid-cols-2 gap-10 pt-10"
+          >
+            <motion.div
+              variants={variants}
+              initial="hidden"
+              animate="visible"
+              className="border border-gray-300 rounded-lg p-6"
+            >
               <div className="text-2xl">Types of wind turbines</div>
-              <div className="text-2xl pt-4">
+              <div className="text-lg pt-4">
                 There are two primary types of wind turbines: horizontal axis
                 and vertical axis. Horizontal-axis turbines, which are
                 positioned parallel to the ground, are the most frequent and
@@ -124,35 +232,61 @@ const Wind = () => {
                 direction and are frequently utilized in urban or decentralized
                 situations.
               </div>
-            </div>
-            <div>
+            </motion.div>
+            <motion.div
+              variants={variants}
+              initial="hidden"
+              animate="visible"
+              className="border border-gray-300 rounded-lg p-6"
+            >
               <div className="text-2xl">
                 Suitable locations for wind turbine installation
               </div>
-              <div className="text-2xl pt-4">
+              <div className="text-lg pt-4">
                 Wind turbines thrive in places where wind speeds are steady and
                 powerful, averaging 6-9 meters per second (m/s). Coastal
                 regions, plains, ridges, and wide landscapes are appropriate for
                 wind energy projects, but site selection must take into account
                 local wind patterns, terrain, and zoning rules.
               </div>
-            </div>
-            <div>
+            </motion.div>
+            <motion.div
+              variants={variants}
+              initial="hidden"
+              animate="visible"
+              className="border border-gray-300 rounded-lg p-6"
+            >
               <div className="text-2xl">Environmental considerations</div>
-              <div className="text-2xl pt-4">
+              <div className="text-lg pt-4">
                 Proper siting, environmental impact assessments, and mitigation
                 strategies are critical for reducing negative effects on
                 species, habitats, and landscapes during wind turbine
                 construction and operation.
               </div>
-            </div>
-          </div>
-
-          <div className="text-3xl font-semibold pt-20">Cost</div>
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 pt-10">
-            <div>
+            </motion.div>
+          </motion.div>
+          <motion.div
+            variants={variants}
+            initial="hidden"
+            animate="visible"
+            className="text-3xl font-bold pt-20"
+          >
+            Cost
+          </motion.div>
+          <motion.div
+            variants={variants}
+            initial="hidden"
+            animate="visible"
+            className="grid grid-cols-1 lg:grid-cols-2 gap-10 pt-10"
+          >
+            <motion.div
+              variants={variants}
+              initial="hidden"
+              animate="visible"
+              className="border border-gray-300 rounded-lg p-6"
+            >
               <div className="text-2xl">Breakdown of turbine costs</div>
-              <div className="text-2xl pt-4">
+              <div className="text-lg pt-4">
                 Turbine prices vary depending on size, capacity, and technology,
                 with average utility-scale turbines costing between $2 million
                 and $4 million. Installation costs include site preparation,
@@ -160,20 +294,30 @@ const Wind = () => {
                 generally accounts for 1-2% of the overall project cost every
                 year.
               </div>
-            </div>
-            <div>
+            </motion.div>
+            <motion.div
+              variants={variants}
+              initial="hidden"
+              animate="visible"
+              className="border border-gray-300 rounded-lg p-6"
+            >
               <div className="text-2xl">Installation expenses</div>
-              <div className="text-2xl pt-4">
+              <div className="text-lg pt-4">
                 Installation costs include site preparation, foundation
                 construction, transportation, crane hire, and labor.
                 Installation costs for onshore projects can vary from $40,000 to
                 $70,000 per turbine, however offshore installations may be more
                 expensive owing to maritime logistics.
               </div>
-            </div>
-            <div>
+            </motion.div>
+            <motion.div
+              variants={variants}
+              initial="hidden"
+              animate="visible"
+              className="border border-gray-300 rounded-lg p-6"
+            >
               <div className="text-2xl">Long-term maintenance costs</div>
-              <div className="text-2xl pt-4">
+              <div className="text-lg pt-4">
                 Long-term maintenance expenditures generally range between 1-2%
                 of the overall project cost every year. Inspections,
                 lubrication, blade cleaning, and component replacement are all
@@ -181,55 +325,171 @@ const Wind = () => {
                 improvements may be necessary every 5-10 years, depending on
                 turbine age and operating circumstances.
               </div>
-            </div>
-          </div>
-          <div className="text-3xl font-semibold pt-20">
+            </motion.div>
+          </motion.div>
+          <motion.div
+            variants={variants}
+            initial="hidden"
+            animate="visible"
+            className="text-3xl font-bold pt-20"
+          >
             Tax Rebate Information
-          </div>
-          <div>
-            <div className="text-2xl">
-              Available Tax Credits and Incentives for Wind Energy
-            </div>
-            <div className="text-2xl pt-4">
-              Federal tax credits, such as the PTC and ITC, provide financial
-              incentives for wind energy installations. State-level incentives
-              for wind energy development may include rebates, subsidies, and
-              property tax exemptions. Federal and state tax credits and
-              incentives encourage wind energy development by providing
-              financial benefits to qualifying projects. To earn tax credits or
-              incentives, claimants must fulfill particular criteria and comply
-              with certain duties.
-            </div>
-          </div>
-          <div className="text-3xl font-semibold pt-20">
+          </motion.div>
+          <motion.div
+            variants={variants}
+            initial="hidden"
+            animate="visible"
+            className="grid grid-cols-1 lg:grid-cols-2 gap-10 pt-10"
+          >
+            <motion.div
+              variants={variants}
+              initial="hidden"
+              animate="visible"
+              className="border border-gray-300 rounded-lg p-6"
+            >
+              <div className="text-2xl">
+                Available Tax Credits and Incentives for Wind Energy
+              </div>
+              <div className="text-lg pt-4">
+                Federal tax credits, such as the PTC and ITC, provide financial
+                incentives for wind energy installations. State-level incentives
+                for wind energy development may include rebates, subsidies, and
+                property tax exemptions. Federal and state tax credits and
+                incentives encourage wind energy development by providing
+                financial benefits to qualifying projects. To earn tax credits
+                or incentives, claimants must fulfill particular criteria and
+                comply with certain duties.
+              </div>
+            </motion.div>
+          </motion.div>
+          <motion.div
+            variants={variants}
+            initial="hidden"
+            animate="visible"
+            className="text-3xl font-bold pt-20"
+          >
             Best Practices for Wind Turbine Maintenance
-          </div>
-          <div>
-            <div className="text-2xl">
-              Available Tax Credits and Incentives for Wind Energy
-            </div>
-            <div className="text-2xl pt-4">
-              Wind turbines require regular maintenance and inspection to
-              guarantee maximum performance, dependability, and safety. Best
-              practices include monitoring turbine functioning, lubricating
-              moving components, examining blades for deterioration, and
-              responding quickly to maintenance concerns. Scheduled maintenance
-              procedures should be completed in accordance with manufacturer
-              guidelines and industry standards to save downtime and increase
-              energy output. Best practices for wind turbine maintenance assure
-              peak performance, dependability, and safety, whilst environmental
-              impact studies assist limit negative effects on ecosystems and
-              communities throughout project construction.
-            </div>
-          </div>
+          </motion.div>
+          <motion.div
+            variants={variants}
+            initial="hidden"
+            animate="visible"
+            className="grid grid-cols-1 lg:grid-cols-2 gap-10 pt-10"
+          >
+            <motion.div
+              variants={variants}
+              initial="hidden"
+              animate="visible"
+              className="border border-gray-300 rounded-lg p-6"
+            >
+              <div className="text-2xl"> Maintenance Tips</div>
+              <div className="text-lg pt-4">
+                Wind turbines require regular maintenance and inspection to
+                guarantee maximum performance, dependability, and safety. Best
+                practices include monitoring turbine functioning, lubricating
+                moving components, examining blades for deterioration, and
+                responding quickly to maintenance concerns. Scheduled
+                maintenance procedures should be completed in accordance with
+                manufacturer guidelines and industry standards to save downtime
+                and increase energy output. Best practices for wind turbine
+                maintenance assure peak performance, dependability, and safety,
+                whilst environmental impact studies assist limit negative
+                effects on ecosystems and communities throughout project
+                construction.
+              </div>
+            </motion.div>
+          </motion.div>
+        </div>
+        <div className="flex justify-center">
+          <motion.div
+            variants={variants}
+            initial="hidden"
+            animate="visible"
+            className="video-container"
+          >
+            <iframe
+              width="560"
+              height="315"
+              src="https://www.youtube.com/watch?v=8S5I4pmmnG4"
+              title="YouTube video player"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            ></iframe>
+          </motion.div>
         </div>
       </main>
+      <motion.section
+        variants={variants}
+        initial="hidden"
+        animate="visible"
+        className="py-10"
+      >
+        {/* Map with wind energy sources */}
+        <div className="flex justify-center mb-8">
+          <div className="w-full h-96 bg-gray-300 rounded-lg flex justify-center items-center">
+            <img
+              src="/src/pages/map.png"
+              alt="Map"
+              className="max-w-full h-auto"
+            />
+          </div>
+        </div>
+
+        {/* Wind energy sources list */}
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-3xl font-bold mb-4">
+            Nearby Wind Energy Sources
+          </h2>
+          <ul>
+            {windEnergySources.map((source, index) => (
+              <li key={index} className="mb-2">
+                {source.name} - Latitude: {source.location.lat}, Longitude:{" "}
+                {source.location.lng}
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        {/* Booking*/}
+        <div className="max-w-md mx-auto mt-8 bg-white p-6 rounded-lg shadow-lg">
+          <h2 className="text-3xl font-bold mb-4">Book your appointment</h2>
+          <form onSubmit={handleCheckout} className="flex flex-col space-y-4">
+            <div className="flex flex-col">
+              <label htmlFor="quantity" className="text-lg mb-1">
+                Time:
+              </label>
+              <input
+                type="number"
+                id="quantity"
+                name="quantity"
+                className="border p-2 rounded"
+              />
+            </div>
+            <div className="flex flex-col">
+              <label htmlFor="paymentMethod" className="text-lg mb-1">
+                Payment Method:
+              </label>
+              <select
+                id="paymentMethod"
+                name="paymentMethod"
+                className="border p-2 rounded"
+              >
+                <option value="credit">Credit Card</option>
+                <option value="paypal">PayPal</option>
+                {/* Add more payment methods as needed */}
+              </select>
+            </div>
+            <button
+              type="submit"
+              className="bg-blue-500 text-white font-bold py-2 px-4 rounded hover:bg-blue-600"
+            >
+              Checkout
+            </button>
+          </form>
+        </div>
+      </motion.section>
     </>
   );
 };
-
-const texts = {
-  overview: {},
-};
-
 export default Wind;
