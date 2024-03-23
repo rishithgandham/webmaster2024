@@ -10,6 +10,8 @@ import Solar from './pages/solar';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 
+import Wind from './pages/wind';
+import Geothermal from './pages/geothermal';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
@@ -18,6 +20,8 @@ root.render(
       <Routes>
         <Route path="/" element={<App />} />
         <Route path="/solar" element={<Solar />} />
+        <Route path='/wind' element={<Wind/>}/>
+        <Route path='/geothermal' element={<Geothermal/>}/>
       </Routes>
       
       <Footer />

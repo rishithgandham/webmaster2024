@@ -54,10 +54,12 @@ body, #root {
   background: url(/images/wind.webp);
   background-size:  cover;
   background-repeat: no-repeat;
-} */
+}
 
 @layer components {
   .green-gradient {
     @apply bg-gradient-to-r bg-clip-text from-green-700 to-lime-300 text-transparent;
   }
 }
+
+*/

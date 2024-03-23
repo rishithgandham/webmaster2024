@@ -69,13 +69,13 @@ let energy_types = [
   },
   {
     name: 'Wind Energy',
-    img_url: '/images/wind.webp',
-    link: '#',
+    img_class: 'wind',
+    link: '/wind',
   },
   {
     name: 'Geothermal Energy',
-    img_url: '/images/geothermal.avif',
-    link: '#',
+    img_class: 'geothermal',
+    link: '/geothermal',
   },
 ];
 
