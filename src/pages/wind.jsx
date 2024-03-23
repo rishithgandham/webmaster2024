@@ -1,22 +1,21 @@
 import React from "react";
 import { motion } from "framer-motion";
-
+import logo from "./logo.png";
+import map from "./map.png";
+import Slider from "react-slick";
 const Wind = () => {
   const variants = {
     hidden: { opacity: 0, y: 50 },
     visible: { opacity: 1, y: 0, transition: { duration: 1 } },
   };
-  // Dummy data for wind energy sources
   const windEnergySources = [
     { name: "Wind Farm 1", location: { lat: 51.5074, lng: -0.1278 } },
     { name: "Wind Farm 2", location: { lat: 40.7128, lng: -74.006 } },
     { name: "Wind Farm 3", location: { lat: -33.8688, lng: 151.2093 } },
-    // Add more wind energy sources as needed
   ];
+  const locations = ["Virginia", "Texas", "California"];
 
-  // Dummy checkout process
   const handleCheckout = () => {
-    // Perform checkout process (this is just a dummy function)
     console.log("Checkout process initiated...");
   };
   return (
@@ -30,15 +29,18 @@ const Wind = () => {
                   variants={variants}
                   initial="hidden"
                   animate="visible"
+                  height={1080}
+                  width={1920}
                 >
                   Wind Energy for Homes
                 </motion.div>
               </div>
-              <div class="image w-1/4 ml-8">
-                <img
-                  src="/src/pages/logo.png"
-                  alt="logo"
-                  class="w-full h-auto"
+              <div className="image w-1/4 ml-4">
+                <motion.img
+                  src={logo}
+                  alt="Logo"
+                  className="logo rounded-full"
+                  whileTap={{ rotate: 360, transition: { delay: 0.1 } }}
                 />
               </div>
             </div>
@@ -400,95 +402,96 @@ const Wind = () => {
             </motion.div>
           </motion.div>
         </div>
-        <div className="flex justify-center">
-          <motion.div
-            variants={variants}
-            initial="hidden"
-            animate="visible"
-            className="video-container"
-          >
-            <iframe
-              width="560"
-              height="315"
-              src="https://www.youtube.com/watch?v=8S5I4pmmnG4"
-              title="YouTube video player"
-              frameBorder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-            ></iframe>
-          </motion.div>
-        </div>
-      </main>
-      <motion.section
-        variants={variants}
-        initial="hidden"
-        animate="visible"
-        className="py-10"
-      >
-        {/* Map with wind energy sources */}
-        <div className="flex justify-center mb-8">
-          <div className="w-full h-96 bg-gray-300 rounded-lg flex justify-center items-center">
-            <img
-              src="/src/pages/map.png"
-              alt="Map"
-              className="max-w-full h-auto"
-            />
-          </div>
-        </div>
-
-        {/* Wind energy sources list */}
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl font-bold mb-4">
-            Nearby Wind Energy Sources
-          </h2>
-          <ul>
-            {windEnergySources.map((source, index) => (
-              <li key={index} className="mb-2">
-                {source.name} - Latitude: {source.location.lat}, Longitude:{" "}
-                {source.location.lng}
-              </li>
-            ))}
-          </ul>
-        </div>
-
-        {/* Booking*/}
-        <div className="max-w-md mx-auto mt-8 bg-white p-6 rounded-lg shadow-lg">
-          <h2 className="text-3xl font-bold mb-4">Book your appointment</h2>
-          <form onSubmit={handleCheckout} className="flex flex-col space-y-4">
-            <div className="flex flex-col">
-              <label htmlFor="quantity" className="text-lg mb-1">
-                Time:
-              </label>
-              <input
-                type="number"
-                id="quantity"
-                name="quantity"
-                className="border p-2 rounded"
-              />
-            </div>
-            <div className="flex flex-col">
-              <label htmlFor="paymentMethod" className="text-lg mb-1">
-                Payment Method:
-              </label>
-              <select
-                id="paymentMethod"
-                name="paymentMethod"
-                className="border p-2 rounded"
+        <motion.section
+          variants={variants}
+          initial="hidden"
+          animate="visible"
+          className="py-10"
+        >
+          <div className="flex flex-col items-center mb-8">
+            <div className="title text-4xl font-extrabold mt-4 mb-6">
+              <motion.div
+                variants={variants}
+                initial="hidden"
+                animate="visible"
+                height={1080}
+                width={1920}
               >
-                <option value="credit">Credit Card</option>
-                <option value="paypal">PayPal</option>
-                {/* Add more payment methods as needed */}
-              </select>
+                Find the service you need near you!
+              </motion.div>
             </div>
-            <button
-              type="submit"
-              className="bg-blue-500 text-white font-bold py-2 px-4 rounded hover:bg-blue-600"
+            <div className="image w-1/2">
+              <img src={map} className="map object-contain" alt="Map" />
+            </div>
+          </div>
+
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-3xl font-bold mb-4 flex justify-center ">
+              Nearby Wind Energy Sources
+            </h2>
+            <ul>
+              {windEnergySources.map((source, index) => (
+                <li key={index} className="mb-2 flex justify-center">
+                  {source.name} - Latitude: {source.location.lat}, Longitude:{" "}
+                  {source.location.lng}
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div className="max-w-md mx-auto mt-8 bg-black p-6 rounded-lg shadow-lg mb-8">
+            <h2 className="text-3xl font-bold mb-4">Book your appointment</h2>
+            <form onSubmit={handleCheckout} className="flex flex-col space-y-4">
+              <div className="flex flex-col">
+                <label htmlFor="quantity" className="text-lg mb-1">
+                  Time:
+                </label>
+                <input
+                  type="number"
+                  id="quantity"
+                  name="quantity"
+                  className="border p-2 rounded"
+                />
+              </div>
+              <div className="flex flex-col">
+                <label htmlFor="paymentMethod" className="text-lg mb-1">
+                  Payment Method:
+                </label>
+                <select
+                  id="paymentMethod"
+                  name="paymentMethod"
+                  className="border p-2 rounded"
+                >
+                  <option value="credit">Credit Card</option>
+                  <option value="paypal">PayPal</option>
+                </select>
+              </div>
+              <button
+                type="submit"
+                className="bg-blue-500 text-white font-bold py-2 px-4 rounded hover:bg-blue-600"
+              >
+                Checkout
+              </button>
+            </form>
+          </div>
+          <div className="flex justify-center">
+            <motion.div
+              variants={variants}
+              initial="hidden"
+              animate="visible"
+              className="video-container"
             >
-              Checkout
-            </button>
-          </form>
-        </div>
-      </motion.section>
+              <iframe
+                width="850"
+                height="560"
+                src="https://www.youtube.com/embed/8S5I4pmmnG4?si=6tKqNqLIPkclneWL"
+                title="YouTube video player"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              ></iframe>
+            </motion.div>
+          </div>
+        </motion.section>
+      </main>
     </>
   );
 };
