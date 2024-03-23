@@ -1,5 +1,5 @@
 import logo from './logo.svg';
-import './App.css'
+import './App.css';
 import { Link } from 'react-router-dom';
 
 function App() {
@@ -22,11 +22,10 @@ function App() {
           </div>
         </div>
       </main>
-      <EnergyTypes/>
-      </>
+      <EnergyTypes />
+    </>
   );
 }
-
 
 function EnergyTypes() {
   return (
@@ -36,13 +35,21 @@ function EnergyTypes() {
           <>
             <div
               // href={e.link}
-              className={`grid rounded-md shadow-xl h-screen ${e.img_class}  grid-rows-2 p-10  group transition-all ease-in-out  border border-white`}
+              style={{
+                backgroundImage: `url(${process.env.PUBLIC_URL}${e.img_url})`,
+                backgroundSize: 'cover',
+                backgroundRepeat: 'no-repeat'
+              }}
+              className={`grid rounded-md shadow-xl h-screen  grid-rows-2 hover:scale-[101%] p-10  group transition-all ease-in-out  border border-white`}
             >
               <div className="flex items-end justify-center">
                 <p className="text-3xl font-bold text-center ">{e.name}</p>
               </div>
               <div className="  mb-2 hidden group-hover:flex items-start justify-center">
-                <Link to={e.link} className=" text-sm mt-3 border  border-white px-5 py-2 hover:bg-opacity-45 hover:bg-white  transition-all ease-in-out">
+                <Link
+                  to={e.link}
+                  className=" text-sm mt-3 border  border-white px-5 py-2 hover:bg-opacity-45 hover:bg-white  transition-all ease-in-out"
+                >
                   Learn More
                 </Link>
               </div>
@@ -57,20 +64,21 @@ function EnergyTypes() {
 let energy_types = [
   {
     name: 'Solar Energy',
-    img_class: 'solar',
+    img_url: '/images/solar.avif',
     link: '/solar',
   },
   {
     name: 'Wind Energy',
-    img_class: 'wind',
+    img_url: '/images/wind.webp',
     link: '#',
   },
   {
     name: 'Geothermal Energy',
-    img_class: 'geothermal',
+    img_url: '/images/geothermal.avif',
     link: '#',
   },
 ];
 
+console.log(process.env.PUBLIC_URL);
 
 export default App;
