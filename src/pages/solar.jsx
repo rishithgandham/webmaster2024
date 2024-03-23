@@ -3,13 +3,24 @@ import React from 'react';
 const Solar = () => {
   return (
     <>
-      <main className=" min-h-screen   w-full bg-gradient-to-b from-black to-slate-950 text-white ">
+      <main className=" min-h-screen   w-full bg-gradient-to-b from-black   to-emerald-950 to-100% text-white ">
         <div className="flex flex-col w-full h-full lg:px-52 md:px-20 px-10 xl:px-96 py-28  ">
           <div className="title text-4xl font-extrabold">
             Solar Energy For Homes
           </div>
+
+          {/* image */}
+
+          <div className="w-full flex  my-10 justify-center items-center ">
+            <img
+              src="/images/solar_article_main.jpg"
+              className="aspect-video w-full rounded-lg shadow-xl"
+              alt="solar panel home"
+            ></img>
+          </div>
+
           {/* overview */}
-          <div className="text-3xl font-bold pt-20 ">Overview</div>
+          <div className="text-3xl font-bold pt-10 ">Overview</div>
           <div className="text-lg font-semibold pt-10">
             Solar Panels work by utilizing panels, which absorb sunlight, and
             turn it into DC energy, which is then fed into an inverter to become
@@ -55,30 +66,43 @@ const Solar = () => {
           <div className="text-3xl font-bold pt-20 ">
             Solar Panel Information
           </div>
+          <div className="grid w-full lg:grid-cols-2 grid-cols-1 pt-16 gap-x-20">
+            {/* content */}
+            <div>
+              <div className="text-2xl font-bold ">
+                Type of Installation (Panel vs. Tile)
+              </div>
+              <div className="text-lg font-semibold pt-10">
+                A solar panel is made up of a series of photovoltaic cells
+                (solar cells) placed on a flat surface. To make electricity,
+                several solar panels are connected together and placed to catch
+                as much sunlight as possible. This sunlight turns into
+                electricity that can be saved in batteries. The solar panels are
+                set up on the roof of a home, garage, or patio using special
+                brackets, leaving some space between the panels and the roof.
+                It's important to position them so they get the most sunlight
+                and produce the most electricity.
+              </div>
+              <div className="text-lg font-semibold pt-10">
+                Solar shingles, also called solar roof tiles, appear like
+                regular roofing materials or asphalt tiles. Solar roof tiles
+                also create electricity just as efficiently or more efficient
+                than standard solar panels. They work like solar panels, using
+                the same method to generate electricity from sunlight, but they
+                are smaller. This allows more to be placed on one roof, thus
+                creating more energy. These panels can also be connected to a
+                battery for excess energy storage.
+              </div>
+            </div>
 
-          <div className="text-2xl font-bold pt-16">
-            Type of Installation (Panel vs. Tile)
-          </div>
-          <div className="text-lg font-semibold pt-10">
-            A solar panel is made up of a series of photovoltaic cells (solar
-            cells) placed on a flat surface. To make electricity, several solar
-            panels are connected together and placed to catch as much sunlight
-            as possible. This sunlight turns into electricity that can be saved
-            in batteries. The solar panels are set up on the roof of a home,
-            garage, or patio using special brackets, leaving some space between
-            the panels and the roof. It's important to position them so they get
-            the most sunlight and produce the most electricity.
-          </div>
-
-          <div className="text-lg font-semibold pt-10">
-            Solar shingles, also called solar roof tiles, appear like regular
-            roofing materials or asphalt tiles. Solar roof tiles also create
-            electricity just as efficiently or more efficient than standard
-            solar panels. They work like solar panels, using the same method to
-            generate electricity from sunlight, but they are smaller. This
-            allows more to be placed on one roof, thus creating more energy.
-            These panels can also be connected to a battery for excess energy
-            storage.
+            {/* image */}
+            <div className="w-full flex   justify-center items-center ">
+              <img
+                src="/images/solar_panel_tiles.avif"
+                className="aspect-square w-full rounded-lg shadow-xl"
+                alt="solar panel home"
+              ></img>
+            </div>
           </div>
 
           <div className="text-2xl font-bold pt-16">
@@ -126,24 +150,37 @@ const Solar = () => {
           <div className="text-2xl font-bold pt-16">
             Estimated savings over time
           </div>
-          <div className="text-lg font-semibold pt-10">
-            Installing solar panels can increase the value of your home - homes
-            that include solar panels selling for 4% more on average. This means
-            that you can get most of your money back after you sell your house.
-            In addition to this, solar panels reduce your energy cost, or in
-            some cases, eliminate it entirely. On average, the return on
-            investment for solar panels is 10-15 years on average. Again,
-            offsetting the cost of your energy usage is the main reason that
-            people buy solar panels to begin with. If you use the maximum amount
-            of energy that your solar panel generates, you should expect a
-            shorter payback period. On the other hand, if you use little to none
-            of the energy your panels generate, then the payback period will be
-            extremely long.
+
+          <div className="grid w-full lg:grid-cols-2 grid-cols-1 pt-16 gap-x-20">
+              
+
+            {/* image */}
+            <div className="w-full flex   justify-center items-center ">
+              <img
+                src="/images/solar_home_roof.avif"
+                className="aspect-auto w-full rounded-lg shadow-xl"
+                alt="solar panel home"
+              ></img>
+            </div>
+            <div className="text-lg font-semibold ">
+                Installing solar panels can increase the value of your home -
+                homes that include solar panels selling for 4% more on average.
+                This means that you can get most of your money back after you
+                sell your house. In addition to this, solar panels reduce your
+                energy cost, or in some cases, eliminate it entirely. On
+                average, the return on investment for solar panels is 10-15
+                years on average. Again, offsetting the cost of your energy
+                usage is the main reason that people buy solar panels to begin
+                with. If you use the maximum amount of energy that your solar
+                panel generates, you should expect a shorter payback period. On
+                the other hand, if you use little to none of the energy your
+                panels generate, then the payback period will be extremely long.
+              </div>
           </div>
 
-          {/* End Cost */}
+          
 
-            
+          {/* End Cost */}
         </div>
       </main>
     </>

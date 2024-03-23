@@ -1,7 +1,11 @@
 import {
+    CopyrightIcon,
   Facebook,
   GithubIcon,
   Instagram,
+  Leaf,
+  LeafIcon,
+  LeafyGreen,
   Mail,
   Quote,
   Twitter,
@@ -11,8 +15,56 @@ import React from 'react';
 
 export default function Footer(props) {
   return (
+    <>
+      <footer className="w-full bg-black border-white border-t  lg:px-36 md:px-20 px-10 xl:px-72  p-5 text-white min-h-20   shadow-xl">
+        <div className="flex justify-center items-center flex-col">
+          {/* links buttons */}
+          <div className="flex justify-between items-center  gap-x-3 ">
+            <Icon icon={<GithubIcon size={13}/>}/>
+            <Icon icon={<Mail size={13}/>}/>
+            <Icon icon={<Instagram size={13}/>}/>
+            <Icon icon={<Twitter size={13}/>}/>
+            <Icon icon={<Facebook size={13}/>}/>
+            <Icon icon={<Youtube size={13}/>}/>
+            
+          </div>
+          <Leaf  size={50} className='my-10 text-emerald-950'/>
+
+          <div className="grid grid-cols-4 md:w-2/4 w-full  gap-x-10 underline text-xs font-semibold text-gray-700 ">
+
+            <p className=" text-center ">Portfolio</p>
+            <p className=" text-center ">Student Copyright</p>
+            <p className=" text-center ">Plan of Worklog</p>
+            <p className=" text-center ">Citations</p>
+          </div>
+          <div className="flex justify-between items-center text-[10px] font-bold text-gray-700 gap-x-3 mt-5">
+          <CopyrightIcon size={10} />
+          <p>2024</p>
+          </div>
+
+        </div>
+      </footer>
+    </>
+  );
+}
+
+function Icon({icon}) {
+  return (
+    <>
+      <a
+        href="http://"
+        className="w-10 h-10  font-extrabold rounded-xl flex justify-center items-center border border-white p-2"
+      >
+        {icon}
+      </a>
+    </>
+  );
+}
+
+export function NotFooter(props) {
+  return (
     <div>
-      <div class="custom-shape-divider-bottom-1711165709">
+      {/* <div class="custom-shape-divider-bottom-1711165709">
         <svg
           data-name="Layer 1"
           xmlns="http://www.w3.org/2000/svg"
@@ -24,9 +76,9 @@ export default function Footer(props) {
             class="shape-fill"
           ></path>
         </svg>
-      </div>
+      </div> */}
 
-      <footer className="w-full bg-[#ffffff] border-t-0  lg:px-36 md:px-20 px-10 xl:px-72  p-5 text-black min-h-32  border-indigo-900">
+      <footer className="w-full bg-black border-white border-t-2 t  lg:px-36 md:px-20 px-10 xl:px-72  p-5 text-white min-h-20   shadow-xl">
         <div className=" grid md:grid-cols-2 grid-cols-1 h-full p-5">
           {/* logo */}
           <div className="flex h-full md:justify-start justify-center items-center mb-10">
@@ -37,9 +89,9 @@ export default function Footer(props) {
 
           {/* grid for all app links, socials, contact, etc. */}
 
-          <div className="grid grid-cols-3 gap-x-20 md:pl-20 pl-0 w-full">
+          <div className="grid grid-cols-3 gap-x-20  pl-0 w-full">
             {/* links */}
-            <div className="flex  items-center h-full flex-col p-5">
+            <div className="flex  items-center h-full flex-col px-5">
               <p className="font-bold text-xs">Links</p>
               <a
                 href="https://github.com/rishithgandham/webmaster2024"
@@ -66,7 +118,7 @@ export default function Footer(props) {
             {/* end links */}
 
             {/* socials */}
-            <div className="flex  items-center h-full flex-col p-5">
+            <div className="flex  items-center h-full flex-col px-5">
               <p className="font-bold text-xs">Socials</p>
               <a
                 href="https://github.com/rishithgandham/webmaster2024"
@@ -99,30 +151,35 @@ export default function Footer(props) {
             </div>
             {/* end socials */}
 
-
-
             {/* socials */}
-            <div className="flex  items-center h-full flex-col p-5">
-              <p className="font-bold text-xs text-center mb-3">Documents (TSA)</p>
+            <div className="flex  items-center h-full flex-col px-5">
+              <p className="font-bold text-xs text-center mb-3">
+                Documents (TSA)
+              </p>
               <a
                 href="https://github.com/rishithgandham/webmaster2024"
                 className="flex items-center hover:bg-slate-50 transition-all  rounded-md py-1 px-2  ease-in-out hover:scale-110"
               >
-                <p className="text-xs font-bold  underline text-center">Plan of Work Log</p>
+                <p className="text-xs font-bold  underline text-center">
+                  Plan of Work Log
+                </p>
               </a>
               <a
                 href="/pdf/citations"
                 className="flex items-center hover:bg-slate-50 transition-all  rounded-md py-1 px-2  ease-in-out hover:scale-110"
               >
-                <p className="text-xs font-bold   underline text-center">Student Copy Right Checklist</p>
+                <p className="text-xs font-bold   underline text-center">
+                  Student Copy Right Checklist
+                </p>
               </a>
               <a
                 href="mailto:greenenergy@gmail.com"
                 className="flex items-center hover:bg-slate-50 transition-all mt-5 rounded-md py-1 px-2  ease-in-out hover:scale-110"
               >
-                <p className="text-xs font-bold pl-3 underline text-center">Portfolio</p>
+                <p className="text-xs font-bold pl-3 underline text-center">
+                  Portfolio
+                </p>
               </a>
-              
             </div>
             {/* end socials */}
           </div>

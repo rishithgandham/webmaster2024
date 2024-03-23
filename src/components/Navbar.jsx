@@ -4,6 +4,7 @@ import {
   Earth,
   File,
   Home,
+  Leaf,
   PanelBottom,
   PanelBottomCloseIcon,
   SquareMenu,
@@ -20,9 +21,9 @@ export default  function Navbar() {
           <div className="w-1/3 md:block hidden">
             <Link
               to="/"
-              className={`text-sm font-bold  text-green-500`}
+              className={`text-sm font-bold  text-emerald-950`}
             >
-              Green Energy
+                <Leaf size={35}/>
             </Link>
           </div>
           <div className="flex p-2 items-center md:justify-end justify-center md:w-1/3 w-full bg-transparent ">
