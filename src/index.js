@@ -6,6 +6,7 @@ import reportWebVitals from './reportWebVitals';
 
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Wind from './pages/wind';
+import Geothermal from './pages/geothermal';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
@@ -13,6 +14,7 @@ root.render(
       <Routes>
         <Route path="/" element={<App/>}/>
         <Route path='/wind' element={<Wind/>}/>
+        <Route path='/geothermal' element={<Geothermal/>}/>
       </Routes>
     </BrowserRouter>
   </React.StrictMode>

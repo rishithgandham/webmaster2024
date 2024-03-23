@@ -68,7 +68,7 @@ let energy_types = [
   {
     name: 'Geothermal Energy',
     img_class: 'geothermal',
-    link: '#',
+    link: '/geothermal',
   },
 ];
 

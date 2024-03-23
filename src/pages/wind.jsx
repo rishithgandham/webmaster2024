@@ -22,7 +22,7 @@ const Wind = () => {
     <>
       <main className="min-h-screen bg-gradient-to-b from-black to-slate-950 text-white">
         <div className="flex flex-col lg:px-52 md:px-20 px-10 xl:px-96 py-28">
-          <div class="container mx-auto py-8 px-4">
+          <div class="container py-8">
             <div class="flex justify-between items-center">
               <div class="title text-4xl font-extrabold">
                 <motion.div
@@ -449,7 +449,7 @@ const Wind = () => {
                   type="number"
                   id="quantity"
                   name="quantity"
-                  className="border p-2 rounded"
+                  className="border p-2 rounded text-black"
                 />
               </div>
               <div className="flex flex-col">
@@ -459,7 +459,7 @@ const Wind = () => {
                 <select
                   id="paymentMethod"
                   name="paymentMethod"
-                  className="border p-2 rounded"
+                  className="border p-2 rounded text-black"
                 >
                   <option value="credit">Credit Card</option>
                   <option value="paypal">PayPal</option>
