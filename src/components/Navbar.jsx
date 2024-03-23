@@ -23,7 +23,7 @@ export default  function Navbar() {
               to="/"
               className={`text-sm font-bold  text-emerald-950`}
             >
-                <Leaf size={35}/>
+                <Leaf size={35  }/>
             </Link>
           </div>
           <div className="flex p-2 items-center md:justify-end justify-center md:w-1/3 w-full bg-transparent ">

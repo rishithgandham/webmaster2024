@@ -16,7 +16,7 @@ import React from 'react';
 export default function Footer(props) {
   return (
     <>
-      <footer className="w-full bg-black border-white border-t  lg:px-36 md:px-20 px-10 xl:px-72  p-5 text-white min-h-20   shadow-xl">
+      <footer className="w-full bg-black border-white border-t pt-10  lg:px-36 md:px-20 px-10 xl:px-72  p-5 text-white min-h-20   shadow-xl">
         <div className="flex justify-center items-center flex-col">
           {/* links buttons */}
           <div className="flex justify-between items-center  gap-x-3 ">

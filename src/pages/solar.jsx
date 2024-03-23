@@ -96,7 +96,7 @@ const Solar = () => {
             </div>
 
             {/* image */}
-            <div className="w-full flex   justify-center items-center ">
+            <div className="w-full flex  mt-5 md:mt-0 justify-center items-center ">
               <img
                 src="/images/solar_panel_tiles.avif"
                 className="aspect-square w-full rounded-lg shadow-xl"
@@ -155,7 +155,7 @@ const Solar = () => {
               
 
             {/* image */}
-            <div className="w-full flex   justify-center items-center ">
+            <div className="w-full flex mb-5 md:mb-0  justify-center items-center ">
               <img
                 src="/images/solar_home_roof.avif"
                 className="aspect-auto w-full rounded-lg shadow-xl"
