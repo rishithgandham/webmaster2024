@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -10,4 +14,35 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+
+
+.custom-shape-divider-bottom-1711165709 {
+  position: relative;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+  
+}
+
+.custom-shape-divider-bottom-1711165709 svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 126px;
+  transform: rotateY(180deg);
+}
+
+.custom-shape-divider-bottom-1711165709 .shape-fill {
+  fill: #020617;
+}
+
+@layer components {
+  .green-gradient {
+    @apply bg-gradient-to-r bg-clip-text from-green-700 to-lime-300 text-transparent;
+  }
 }
