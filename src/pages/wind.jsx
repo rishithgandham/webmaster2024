@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { motion } from "framer-motion";
 import logo from "./logo.png";
 import map from "./map.png";
@@ -7,6 +7,22 @@ import wind_side from "./wind_three.jpg";
 import wind_gif from "./windmill_03.gif";
 import wind_turbine from "./wind_turbine.jpg";
 const Wind = () => {
+
+
+  useEffect(() => () => { // <-- Now we return the useEffect teardown effect, which will be fired only after the path/search change for the first time
+    try {
+      // trying to use new API - https://developer.mozilla.org/en-US/docs/Web/API/Window/scrollTo
+      window.scroll({
+        top: 0,
+        left: 0,
+        behavior: 'auto',
+      });
+    } catch (error) {
+      // just a fallback for older browsers
+      window.scrollTo(0, 0);
+    }
+  }, []);
+
   const variants = {
     hidden: { opacity: 0, y: 50 },
     visible: { opacity: 1, y: 0, transition: { duration: 1 } },
@@ -23,7 +39,7 @@ const Wind = () => {
   };
   return (
     <>
-      <main className="min-h-screen bg-gradient-to-b from-black to-slate-950 text-white">
+      <main className="min-h-screen bg-gradient-to-b from-black   to-emerald-950 text-white">
         <div className="flex flex-col lg:px-52 md:px-20 px-10 xl:px-96 py-28">
           <div class="container py-8">
             <div class="flex justify-between items-center">
@@ -528,12 +544,11 @@ const Wind = () => {
               </button>
             </form>
           </div>
-          <div className="flex justify-center">
+          <div className="flex justify-center pb-10">
             <motion.div
               variants={variants}
               initial="hidden"
               animate="visible"
-              className="video-container"
             >
               <iframe
                 width="850"
@@ -542,6 +557,7 @@ const Wind = () => {
                 title="YouTube video player"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
+                className="rounded-3xl"
               ></iframe>
             </motion.div>
           </div>

@@ -17,7 +17,7 @@ import { Link, useNavigate } from 'react-router-dom';
 export default  function Navbar() {
     return (
       <>
-        <nav className="h-14 pt-10 flex justify-between items-center md:px-10 bg-black text-white px-5">
+        <nav className="min-h-14  flex justify-between border-b-0 items-center md:px-10 bg-black text-white px-5">
           <div className="w-1/3 md:block hidden">
             <Link
               to="/"
@@ -27,13 +27,12 @@ export default  function Navbar() {
             </Link>
           </div>
           <div className="flex p-2 items-center md:justify-end justify-center md:w-1/3 w-full bg-transparent ">
-            <NavbarLink href="/auth/login" name="Solar" icon={<SquareMenu size={18}/>}/>
-            <NavbarLink href="/aboutus" name="Wind" icon={<Wind size={18}/>} />
-            <NavbarLink href="/aboutus" name="Geothermal" icon={<Earth size={18}/>} />
-            <NavbarLink href="/aboutus" name="Home" icon={<Home size={18}/>} />
+            <NavbarLink href="/solar" name="Solar" icon={<SquareMenu size={18}/>}/>
+            <NavbarLink href="/wind" name="Wind" icon={<Wind size={18}/>} />
+            <NavbarLink href="/geothermal" name="Geothermal" icon={<Earth size={18}/>} />
 
             {/* dropdown */}
-            <NavbarLink href="/aboutus" name="TSA Documents" icon={<File size={18}/>} />
+            <NavbarLink href="/tsa" name="TSA" icon={<File size={18}/>} />
   
             
           </div>
@@ -46,7 +45,7 @@ export default  function Navbar() {
   function NavbarLink({ icon, href, name }) {
     return (
       <Link
-        href={href}
+        to={href}
         className="flex p-2   rounded-xl  items-center transition-all ease-in-out  m-5 hover:scale-110 hover:translate-y-1   xl:mx-10"
       >
         {<p className="mr-3">{icon}</p>}

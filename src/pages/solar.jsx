@@ -1,6 +1,24 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 
 const Solar = () => {
+  useEffect(
+    () => () => {
+      // <-- Now we return the useEffect teardown effect, which will be fired only after the path/search change for the first time
+      try {
+        // trying to use new API - https://developer.mozilla.org/en-US/docs/Web/API/Window/scrollTo
+        window.scroll({
+          top: 0,
+          left: 0,
+          behavior: 'auto',
+        });
+      } catch (error) {
+        // just a fallback for older browsers
+        window.scrollTo(0, 0);
+      }
+    },
+    []
+  );
+
   return (
     <>
       <main className=" min-h-screen   w-full bg-gradient-to-b from-black   to-emerald-950 to-100% text-white ">
@@ -152,8 +170,6 @@ const Solar = () => {
           </div>
 
           <div className="grid w-full lg:grid-cols-2 grid-cols-1 pt-16 gap-x-20">
-              
-
             {/* image */}
             <div className="w-full flex mb-5 md:mb-0  justify-center items-center ">
               <img
@@ -163,24 +179,39 @@ const Solar = () => {
               ></img>
             </div>
             <div className="text-lg font-semibold ">
-                Installing solar panels can increase the value of your home -
-                homes that include solar panels selling for 4% more on average.
-                This means that you can get most of your money back after you
-                sell your house. In addition to this, solar panels reduce your
-                energy cost, or in some cases, eliminate it entirely. On
-                average, the return on investment for solar panels is 10-15
-                years on average. Again, offsetting the cost of your energy
-                usage is the main reason that people buy solar panels to begin
-                with. If you use the maximum amount of energy that your solar
-                panel generates, you should expect a shorter payback period. On
-                the other hand, if you use little to none of the energy your
-                panels generate, then the payback period will be extremely long.
-              </div>
+              Installing solar panels can increase the value of your home -
+              homes that include solar panels selling for 4% more on average.
+              This means that you can get most of your money back after you sell
+              your house. In addition to this, solar panels reduce your energy
+              cost, or in some cases, eliminate it entirely. On average, the
+              return on investment for solar panels is 10-15 years on average.
+              Again, offsetting the cost of your energy usage is the main reason
+              that people buy solar panels to begin with. If you use the maximum
+              amount of energy that your solar panel generates, you should
+              expect a shorter payback period. On the other hand, if you use
+              little to none of the energy your panels generate, then the
+              payback period will be extremely long.
+            </div>
           </div>
 
-          
-
           {/* End Cost */}
+
+          {/* video */}
+
+          <div className="flex justify-center pt-20">
+            <iframe
+              
+              src="https://www.youtube.com/embed/UJeSWbR6W04?si=HXJWLrLHTHNaFamy"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen
+              className="rounded-3xl aspect-video  w-5/6"
+
+            ></iframe>
+            
+          </div>
         </div>
       </main>
     </>
