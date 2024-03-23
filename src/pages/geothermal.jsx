@@ -213,7 +213,7 @@ const Wind = () => {
             variants={variants}
             initial="hidden"
             animate="visible"
-            className="grid grid-cols-2 grid-rows-1 gap-10 pt-10"
+            className="grid grid-cols-2  grid-rows-1 gap-10 pt-10"
           >
             <motion.div
               variants={variants}
@@ -516,7 +516,7 @@ const Wind = () => {
               </button>
             </form>
           </div>
-          <div className="flex justify-center pt-20 pb-10">
+          <div className="flex justify-center pt-20 pb-10   ">
             
               <iframe
                 
