@@ -516,22 +516,17 @@ const Wind = () => {
               </button>
             </form>
           </div>
-          <div className="flex justify-center">
-            <motion.div
-              variants={variants}
-              initial="hidden"
-              animate="visible"
-              className="video-container"
-            >
+          <div className="flex justify-center pt-20 pb-10">
+            
               <iframe
-                width="850"
-                height="560"
+                
                 src="https://www.youtube.com/embed/-36VWp9Sf4A?si=2VawjHM5mBTeq-1q"
                 title="YouTube video player"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
+              className="rounded-3xl aspect-video  w-5/6"
+
               ></iframe>
-            </motion.div>
           </div>
         </motion.section>
       </main>
