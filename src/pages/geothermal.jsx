@@ -214,7 +214,7 @@ const Wind = () => {
             initial="hidden"
             animate="visible"
             className="grid grid-cols-2  grid-rows-1 gap-10 pt-10"
-          >
+          > 
             <motion.div
               variants={variants}
               initial="hidden"

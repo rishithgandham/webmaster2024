@@ -32,7 +32,7 @@ export default  function Navbar() {
             <NavbarLink href="/geothermal" name="Geothermal" icon={<Earth size={18}/>} />
 
             {/* dropdown */}
-            <NavbarLink href="/tsa" name="TSA" icon={<File size={18}/>} />
+            {/* <NavbarLink href="/tsa" name="TSA" icon={<File size={18}/>} /> */}
   
             
           </div>
