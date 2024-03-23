@@ -6,7 +6,6 @@ import wind_start from "./wind_two.jpg";
 import wind_side from "./wind_three.jpg";
 import wind_gif from "./windmill_03.gif";
 import wind_turbine from "./wind_turbine.jpg";
-import Slider from "react-slick";
 const Wind = () => {
   const variants = {
     hidden: { opacity: 0, y: 50 },

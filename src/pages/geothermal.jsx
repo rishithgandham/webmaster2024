@@ -2,7 +2,6 @@ import React from "react";
 import { motion } from "framer-motion";
 import logo from "./logo.png";
 import map from "./map.png";
-import Slider from "react-slick";
 const Wind = () => {
   const variants = {
     hidden: { opacity: 0, y: 50 },
