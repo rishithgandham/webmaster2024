@@ -2,6 +2,11 @@ import React from "react";
 import { motion } from "framer-motion";
 import logo from "./logo.png";
 import map from "./map.png";
+import geothermal_start from "./Geothermal-Power-Plant.png.webp";
+import geothermal_gif from "./Geothermal-heat-pump-GHP-in-Winter-Summer.gif";
+import geothermal_img from "./photo-1610720707798-6fe21dc165ba.avif";
+import geothermal_img_two from "./CI_Map_geothermalnrel_US_133_161003.jpg";
+import geothermal_img_three from "./Geothermal-Energy-Costs.jpg";
 const Wind = () => {
   const variants = {
     hidden: { opacity: 0, y: 50 },
@@ -44,7 +49,18 @@ const Wind = () => {
               </div>
             </div>
           </div>
-
+          <div className="image w-full my-10 ">
+            <motion.img
+              variants={variants}
+              initial="hidden"
+              animate="visible"
+              height={1080}
+              width={1920}
+              src={geothermal_start}
+              alt="geothermal_start"
+              className="wind rounded-3xl aspect-video object-cover"
+            />
+          </div>
           <motion.div
             variants={variants}
             initial="hidden"
@@ -59,21 +75,21 @@ const Wind = () => {
             animate="visible"
             className="text-lg font-semibold pt-10"
           >
-            Geothermal energy, a renewable energy source, taps into the Earth's
-            internal heat to produce electricity and heat buildings. It offers a
-            reliable, sustainable alternative to traditional fossil fuels.
-            Geothermal power plants harness this energy through various
-            technologies, including dry steam, flash steam, and binary cycle
-            systems. These systems extract heat from reservoirs of hot water or
-            steam located deep underground. Geothermal energy is abundant in
-            regions with high volcanic activity or tectonic plate boundaries,
-            such as Iceland, the United States, and the Philippines.
+            Geothermal energy, a sustainable energy source, uses the Earth's
+            internal heat to generate power and heat buildings. It provides a
+            dependable, sustainable alternative to conventional fossil fuels.
+            Geothermal power plants use a variety of technologies to harvest
+            this energy, such as dry steam, flash steam, and binary cycle
+            systems. These systems draw heat from hot water or steam reservoirs
+            that are deep below. Geothermal energy is abundant in areas of
+            significant volcanic activity or tectonic plate borders, such as
+            Iceland, the United States, and the Philippines.
           </motion.div>
           <motion.div
             variants={variants}
             initial="hidden"
             animate="visible"
-            className="text-3xl font-bold pt-20"
+            className="text-3xl font-extrabold pt-20"
           >
             Advantages Of Wind Power In Renewable Energy Production
           </motion.div>
@@ -81,7 +97,7 @@ const Wind = () => {
             variants={variants}
             initial="hidden"
             animate="visible"
-            className="grid grid-cols-1 lg:grid-cols-2 gap-10 pt-10"
+            className="grid grid-cols-2 grid-rows-1 gap-10 pt-10"
           >
             <motion.div
               variants={variants}
@@ -89,8 +105,10 @@ const Wind = () => {
               animate="visible"
               className="border border-gray-300 rounded-lg p-6"
             >
-              <div className="text-2xl">Renewable and Sustainable</div>
-              <div className="text-lg pt-4">
+              <div className="text-2xl font-bold">
+                Renewable and Sustainable
+              </div>
+              <div className="text-lg pt-4 font-semibold">
                 Geothermal energy derives from the Earth's heat, which is
                 continuously replenished, making it a sustainable energy source
                 for the long term.
@@ -100,10 +118,10 @@ const Wind = () => {
               variants={variants}
               initial="hidden"
               animate="visible"
-              className="border border-gray-300 rounded-lg p-6"
+              className="col-start-1 row-start-2 border border-gray-300 rounded-lg p-6"
             >
-              <div className="text-2xl">Reliable and Constant</div>
-              <div className="text-lg pt-4">
+              <div className="text-2xl font-bold">Reliable and Constant</div>
+              <div className="text-lg pt-4 font-semibold">
                 Unlike solar and wind power, geothermal energy is available
                 24/7, providing a consistent source of electricity and heat,
                 even during adverse weather conditions.
@@ -113,10 +131,10 @@ const Wind = () => {
               variants={variants}
               initial="hidden"
               animate="visible"
-              className="border border-gray-300 rounded-lg p-6"
+              className="row-start-3 border border-gray-300 rounded-lg p-6"
             >
-              <div className="text-2xl">Low Operating Costs</div>
-              <div className="text-lg pt-4">
+              <div className="text-2xl font-bold">Low Operating Costs</div>
+              <div className="text-lg pt-4 font-semibold">
                 Once installed, geothermal systems have relatively low operating
                 and maintenance costs compared to traditional heating and
                 cooling systems, leading to long-term savings.
@@ -126,10 +144,10 @@ const Wind = () => {
               variants={variants}
               initial="hidden"
               animate="visible"
-              className="border border-gray-300 rounded-lg p-6"
+              className="row-start-3 border border-gray-300 rounded-lg p-6"
             >
-              <div className="text-2xl">Job Creation</div>
-              <div className="text-lg pt-4">
+              <div className="text-2xl font-bold">Job Creation</div>
+              <div className="text-lg pt-4 font-semibold">
                 The development and operation of geothermal power plants create
                 employment opportunities in construction, engineering, and
                 maintenance sectors, boosting local economies.
@@ -139,21 +157,39 @@ const Wind = () => {
               variants={variants}
               initial="hidden"
               animate="visible"
-              className="border border-gray-300 rounded-lg p-6"
+              className="col-span-2 row-start-4 border border-gray-300 rounded-lg p-6"
             >
-              <div className="text-2xl">Energy Independence</div>
-              <div className="text-lg pt-4">
+              <div className="text-2xl font-bold">Energy Independence</div>
+              <div className="text-lg pt-4 font-semibold">
                 Harnessing geothermal energy reduces reliance on imported fossil
                 fuels, enhancing energy security and reducing exposure to
                 volatile fuel prices.
               </div>
             </motion.div>
+            <div className="image w-full my-10">
+              <motion.img
+                variants={variants}
+                initial="hidden"
+                animate="visible"
+                height={1080}
+                width={1920}
+                src={geothermal_gif}
+                alt="geothermal_gif"
+                className="wind rounded-3xl aspect-sqaure h-full object-cover"
+              />
+              <motion.div ariants={variants} initial="hidden" animate="visible">
+                <div className="mb-4 flex justify-center text-xs font-bold mt-2">
+                  {" "}
+                  Geothermal energy is capable of running in all seasons{" "}
+                </div>
+              </motion.div>
+            </div>
           </motion.div>
           <motion.div
             variants={variants}
             initial="hidden"
             animate="visible"
-            className="text-3xl font-bold pt-20"
+            className="text-3xl font-extrabold pt-20"
           >
             Information On geothermal energy
           </motion.div>
@@ -161,7 +197,7 @@ const Wind = () => {
             variants={variants}
             initial="hidden"
             animate="visible"
-            className="grid grid-rows-1 lg:grid-rows-2 gap-10 pt-10"
+            className="grid grid-cols-2 grid-rows-1 gap-10 pt-10"
           >
             <motion.div
               variants={variants}
@@ -169,8 +205,10 @@ const Wind = () => {
               animate="visible"
               className="border border-gray-300 rounded-lg p-4 lg:p-6"
             >
-              <div className="text-2xl">Types of geothermal energy</div>
-              <div className="text-lg pt-4">
+              <div className="text-2xl font-bold">
+                Types of geothermal energy
+              </div>
+              <div className="text-lg pt-4 font-semibold">
                 Geothermal energy encompasses various systems for harnessing
                 Earth's heat, including hydrothermal systems, which tap into
                 natural reservoirs of hot water or steam through wells for
@@ -185,45 +223,28 @@ const Wind = () => {
                 portfolio.
               </div>
             </motion.div>
-
+            <div className="image w-full">
+              <motion.img
+                variants={variants}
+                initial="hidden"
+                animate="visible"
+                height={1080}
+                width={1920}
+                src={geothermal_img}
+                alt="geothermal_img"
+                className="wind rounded-3xl aspect-sqaure h-full object-cover"
+              />
+            </div>
             <motion.div
               variants={variants}
               initial="hidden"
               animate="visible"
-              className="border border-gray-300 rounded-lg p-6"
+              className="col-span-2 col-start-1 row-start-2 border border-gray-300 rounded-lg p-6"
             >
-              <div className="text-2xl">
-                Suitable locations for geothermal energy usage
+              <div className="text-2xl font-bold">
+                Environmental considerations
               </div>
-              <div className="text-lg pt-4">
-                Suitable locations for geothermal energy are typically found in
-                regions with active tectonic activity or volcanic features, as
-                these geological conditions create ideal environments for
-                harnessing Earth's heat. Areas along tectonic plate boundaries,
-                such as the Pacific Ring of Fire, often exhibit high geothermal
-                potential due to the presence of magma chambers and elevated
-                subsurface temperatures. Additionally, regions with geothermal
-                gradients—where the temperature increases with depth—are
-                conducive to geothermal development. Countries like Iceland, the
-                United States (particularly the western states), the
-                Philippines, Indonesia, and New Zealand boast significant
-                geothermal resources and have established robust geothermal
-                industries. However, advancements in technology, such as
-                enhanced geothermal systems (EGS), are expanding the potential
-                for geothermal energy development in areas previously considered
-                less favorable. Factors such as proximity to population centers,
-                geological stability, and regulatory frameworks also influence
-                the suitability of locations for geothermal energy projects.
-              </div>
-            </motion.div>
-            <motion.div
-              variants={variants}
-              initial="hidden"
-              animate="visible"
-              className="border border-gray-300 rounded-lg p-6"
-            >
-              <div className="text-2xl">Environmental considerations</div>
-              <div className="text-lg pt-4">
+              <div className="text-lg pt-4 font-semibold">
                 Geothermal energy is a clean, low-carbon source of power that
                 produces minimal greenhouse gas emissions. It helps reduce
                 reliance on fossil fuels, mitigating air pollution and combating
@@ -234,12 +255,54 @@ const Wind = () => {
                 to prevent depletion and ensure long-term sustainability.
               </div>
             </motion.div>
+            <motion.div
+              variants={variants}
+              initial="hidden"
+              animate="visible"
+              className="col-span-2 row-start-3 border border-gray-300 rounded-lg p-6"
+            >
+              <div className="text-2xl font-bold">
+                Suitable locations for geothermal energy usage
+              </div>
+              <div className="text-lg pt-4 font-semibold">
+                Geothermal energy is best suited to places with active tectonic
+                activity or volcanic features, since these geological factors
+                produce perfect circumstances for harvesting the Earth's heat.
+                Areas bordering tectonic plate borders, such as the Pacific Ring
+                of Fire, frequently have great geothermal potential due to the
+                existence of magma chambers and rising subsurface temperatures.
+                Furthermore, geothermal gradients—where the temperature rises
+                with depth—are ideal for geothermal development. Iceland, the
+                United States (especially the western states), the Philippines,
+                Indonesia, and New Zealand all have major geothermal resources
+                and well-developed geothermal industry. However, technological
+                breakthroughs such as improved geothermal systems (EGS) are
+                widening the possibility for geothermal energy production in
+                previously underserved areas.
+              </div>
+            </motion.div>
+            <div className="row-start-4 col-span-2 image flex flex-col items-center justify-center">
+              <motion.img
+                variants={variants}
+                initial="hidden"
+                animate="visible"
+                src={geothermal_img_two}
+                alt="geothermal_img_two"
+                className="wind rounded-3xl aspect-sqaure object-cover"
+              />
+              <motion.div ariants={variants} initial="hidden" animate="visible">
+                <div className="mb-4 flex justify-center text-xs font-bold mt-2">
+                  {" "}
+                  Geothermal resources of the Unites States Of America{" "}
+                </div>
+              </motion.div>
+            </div>
           </motion.div>
           <motion.div
             variants={variants}
             initial="hidden"
             animate="visible"
-            className="text-3xl font-bold pt-20"
+            className="text-3xl font-extrabold pt-20"
           >
             Cost
           </motion.div>
@@ -255,8 +318,10 @@ const Wind = () => {
               animate="visible"
               className="border border-gray-300 rounded-lg p-6"
             >
-              <div className="text-2xl">Initial Installation Costs</div>
-              <div className="text-lg pt-4">
+              <div className="text-2xl font-bold">
+                Initial Installation Costs
+              </div>
+              <div className="text-lg pt-4 font-semibold">
                 The initial cost of installing a geothermal system can be higher
                 than traditional heating and cooling systems due to drilling and
                 equipment expenses.
@@ -268,8 +333,8 @@ const Wind = () => {
               animate="visible"
               className="border border-gray-300 rounded-lg p-6"
             >
-              <div className="text-2xl">Long-Term Savings:</div>
-              <div className="text-lg pt-4">
+              <div className="text-2xl font-bold">Long-Term Savings:</div>
+              <div className="text-lg pt-4 font-semibold">
                 Despite the higher upfront costs, geothermal systems often
                 provide significant long-term savings on energy bills, resulting
                 in a favorable return on investment over time.
@@ -281,20 +346,30 @@ const Wind = () => {
               animate="visible"
               className="border border-gray-300 rounded-lg p-6"
             >
-              <div className="text-2xl">Financing Options</div>
-              <div className="text-lg pt-4">
+              <div className="text-2xl font-bold">Financing Options</div>
+              <div className="text-lg pt-4 font-semibold">
                 Financing programs, such as low-interest loans or energy
                 efficiency mortgages, may be available to help offset the
                 initial investment and make geothermal energy more accessible to
                 homeowners and businesses.
               </div>
             </motion.div>
+            <div className="col-start-2 image flex flex-col items-center justify-center w-full">
+              <motion.img
+                variants={variants}
+                initial="hidden"
+                animate="visible"
+                src={geothermal_img_three}
+                alt="geothermal_img_three"
+                className="wind rounded-3xl aspect-sqaure h-full object-cover"
+              />
+            </div>
           </motion.div>
           <motion.div
             variants={variants}
             initial="hidden"
             animate="visible"
-            className="text-3xl font-bold pt-20"
+            className="text-3xl font-extrabold pt-20"
           >
             Tax Rebate Information
           </motion.div>
@@ -305,8 +380,8 @@ const Wind = () => {
             className="pt-10"
           >
             <motion.div variants={variants} initial="hidden" animate="visible">
-              <div className="text-2xl">Federal Tax Credits:</div>
-              <div className="text-lg pt-4">
+              <div className="text-2xl font-bold">Federal Tax Credits:</div>
+              <div className="text-lg pt-4 font-semibold">
                 The U.S. federal government offers a tax credit of up to 26% of
                 the cost of installing a geothermal heat pump system for
                 residential properties. State Rebates: Many states provide
@@ -323,7 +398,7 @@ const Wind = () => {
             variants={variants}
             initial="hidden"
             animate="visible"
-            className="text-3xl font-bold pt-20"
+            className="text-3xl font-extrabold pt-20"
           >
             Best practices for geothermal maintenance
           </motion.div>
@@ -339,41 +414,27 @@ const Wind = () => {
               animate="visible"
               className="border border-gray-300 rounded-lg p-6"
             >
-              <div className="text-2xl"> Maintenance Tips</div>
-              <div className="text-lg pt-4">
-                Best practices for geothermal energy encompass a multifaceted
-                approach aimed at ensuring sustainable development,
-                environmental stewardship, community engagement, technological
-                innovation, regulatory compliance, collaboration, capacity
-                building, risk management, and continuous monitoring and
-                evaluation. This involves conducting comprehensive resource
-                assessments to identify suitable locations, implementing
-                sustainable practices to safeguard geothermal resources,
-                mitigating environmental impacts through effective management
-                strategies, engaging with local communities and stakeholders to
-                build support and address concerns, investing in research and
-                development to advance technologies and improve efficiency,
-                adhering to regulatory requirements and obtaining necessary
-                permits, fostering collaboration and knowledge sharing among
-                industry stakeholders, building a skilled workforce through
-                education and training initiatives, managing risks through
-                thorough assessments and mitigation plans, and monitoring
-                project performance to optimize outcomes and ensure
-                accountability. By integrating these best practices into
-                geothermal development initiatives, stakeholders can promote
-                responsible and sustainable utilization of geothermal energy
-                resources, contributing to a cleaner, more resilient energy
-                future.
+              <div className="text-2xl font-bold"> Maintenance Tips</div>
+              <div className="text-lg pt-4 font-semibold">
+                Geothermal energy best practices prioritize sustainable
+                development, environmental stewardship, community engagement,
+                technological innovation, regulatory compliance, collaboration,
+                capacity building, risk management, and continuous monitoring
+                and evaluation. This involves conducting resource assessments to
+                identify suitable locations, implementing sustainable practices
+                to safeguard geothermal resources, mitigating environmental
+                impacts through effective management strategies, engaging with
+                local communities and stakeholders to build support, and
+                investing in research and development to advance technology. By
+                integrating these best practices into geothermal development
+                initiatives, stakeholders can promote responsible and
+                sustainable utilization of geothermal energy resources,
+                contributing to a cleaner, more resilient energy future.
               </div>
             </motion.div>
           </motion.div>
         </div>
-        <motion.section
-          variants={variants}
-          initial="hidden"
-          animate="visible"
-          className="py-10"
-        >
+        <motion.section variants={variants} initial="hidden" animate="visible">
           <div className="flex flex-col items-center">
             <div className="title text-4xl font-extrabold mb-6">
               <motion.div
@@ -391,8 +452,8 @@ const Wind = () => {
             </div>
           </div>
 
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold mb-4 flex justify-center ">
+          <div className="max-w-4xl mx-auto mt-10">
+            <h2 className="text-3xl font-bold mb-4 flex justify-center">
               Nearby Geothermal Energy Sources
             </h2>
             <ul>
