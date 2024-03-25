@@ -1,4 +1,10 @@
+import { motion } from 'framer-motion';
 import React, { useEffect } from 'react';
+
+const variants = {
+  hidden: { opacity: 0, y: 50 },
+  visible: { opacity: 1, y: 0, transition: { duration: 1 } },
+};
 
 const Solar = () => {
   useEffect(
@@ -22,7 +28,12 @@ const Solar = () => {
   return (
     <>
       <main className=" min-h-screen   w-full bg-gradient-to-b from-black   to-emerald-950 to-100% text-white ">
-        <div className="flex flex-col w-full h-full lg:px-52 md:px-20 px-10 xl:px-96 py-28  ">
+        <motion.div
+          initial="hidden"
+          animate="visible"
+          variants={variants}
+          className="flex flex-col w-full h-full lg:px-52 md:px-20 px-10 xl:px-96 py-28  "
+        >
           <div className="title text-4xl font-extrabold">
             Solar Energy For Homes
           </div>
@@ -198,9 +209,12 @@ const Solar = () => {
 
           {/* video */}
 
+          <div className="title text-4xl font-extrabold text-center mt-40">
+            Related Videos
+          </div>
+
           <div className="flex justify-center pt-20">
             <iframe
-              
               src="https://www.youtube.com/embed/UJeSWbR6W04?si=HXJWLrLHTHNaFamy"
               title="YouTube video player"
               frameborder="0"
@@ -208,11 +222,9 @@ const Solar = () => {
               referrerpolicy="strict-origin-when-cross-origin"
               allowfullscreen
               className="rounded-3xl aspect-video  w-5/6"
-
             ></iframe>
-            
           </div>
-        </div>
+        </motion.div>
       </main>
     </>
   );

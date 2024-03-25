@@ -1,11 +1,11 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
 // use create browser router after pull
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { BrowserRouter, Route, Routes, useLocation } from 'react-router-dom';
 import Solar from './pages/solar';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
@@ -16,6 +16,7 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <BrowserRouter>
+      <ScrollToTop/>
       <Navbar />
       <Routes>
         <Route path="/" element={<App />} />
@@ -28,6 +29,17 @@ root.render(
     </BrowserRouter>
   </React.StrictMode>
 );
+
+
+export default function ScrollToTop() {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
+  return null;
+}
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))

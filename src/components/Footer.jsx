@@ -53,7 +53,7 @@ function Icon({icon}) {
     <>
       <a
         href="http://"
-        className="w-10 h-10  font-extrabold rounded-xl flex justify-center items-center border border-white p-2"
+        className="w-10 h-10  font-extrabold rounded-xl hover:scale-110 transition-all ease-in-out flex justify-center items-center border border-white p-2"
       >
         {icon}
       </a>
