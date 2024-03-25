@@ -18,6 +18,7 @@ export default function References(props) {
           variants={variants}
           className="flex flex-col w-full h-full lg:px-40 md:px-16 px-5 xl:px-40 py-28  "
         >
+
             <div className="grid grid-cols-2 grid-rows-2 w-full h-screen">
                 <div className="col-start-1 row-start-1 flex flex-col justify-center items-center">
                   <p className="text-center font-bold text-2xl">Citations</p>
@@ -39,6 +40,9 @@ export default function References(props) {
                 </div>
 
             </div>
+
+            <div className="text-2xl text-center font-bold lg:px-72">This website was made entirely by our team using the javascript framework react and css styling library tailwind, view <span><a href="https://github.com/rishithgandham/webmaster2024" className='underline'>source code</a></span> here.</div>
+
         </motion.div>
       </main>
     </>
