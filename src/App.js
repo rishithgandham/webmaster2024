@@ -8,13 +8,13 @@ function App() {
       <main className=" h-screen  w-full border-t-0  bg-black text-white landing">
         <div className="h-full flex justify-center flex-col  items-center ">
           <p className="text-5xl font-bold green-gradient pb-5">Green Energy</p>
-          <p className="text-lg  font-bold ">
-            TSA WEBMASTER 2024 - Hampton, Virginia
+          <p className="text-lg  font-bold text-center">
+            VIRGINIA STATE CONFERENCE 2024 - Hampton, Virginia
           </p>
           <div className=" mt-5 sm:flex hidden">
             <div className="relative rounded-full  text-xs leading-6 ring-1 ring-white py-[2px] px-4 hover:scale-[102%] transition-all ease-in-out ">
               Announcing our solar energy calculator{' '}
-              <a href="#" className={`font-semibold green-gradient`}>
+              <a href="/" className={`font-semibold green-gradient`}>
                 <span className="absolute inset-0" aria-hidden="true" />
                 Try it out! <span aria-hidden="true">&rarr;</span>
               </a>
@@ -23,6 +23,7 @@ function App() {
           <img
             src="/images/landing_solar.jpg"
             className="h-[4/10] lg:h-1/2 mx-20  rounded-3xl md:block hidden aspect-video mt-10"
+            alt=""
           ></img>
         </div>
       </main>
@@ -33,8 +34,8 @@ function App() {
             {/* content */}
 
             <div>
-              <div className="text-3xl font-bold ">Overview</div>
-              <div className="text-lg font-semibold pt-10">
+              <div className="text-3xl font-bold text-center">Overview</div>
+              <div className="text-lg font-semibold pt-10 text-center">
                 Green energy for homes is all about using clean and sustainable
                 sources like sunlight, the wind, and the earth's heat to power
                 household activities. It's like making a smart choice for the

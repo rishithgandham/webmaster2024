@@ -704,7 +704,7 @@ function WindNew() {
 
             {/* grid connected */}
             <div>
-              <div className="text-2xl font-bold">Grid-connected Systems</div>
+              <div className="text-2xl font-bold md:mt-0 mt-10">Grid-connected Systems</div>
               <div className="text-lg font-semibold pt-10">
                 Small wind energy turbines can be connected to external
                 electricity systems like the grid. This makes it so that you can
@@ -729,7 +729,7 @@ function WindNew() {
               </div>
             </div>
             {/* image */}
-            <div className="w-full  aspect-video h-full  ">
+            <div className="w-full  aspect-video h-full md:mt-0 mt-10 ">
               <img
                 src="/images/off_the_grid.avif"
                 className=" w-full h-full rounded-lg shadow-xl"
@@ -744,7 +744,7 @@ function WindNew() {
           {/* INSTALLATION/MAINTENANCE */}
           {/* INSTALLATION/MAINTENANCE */}
 
-          <div className="text-3xl font-bold pt-16">
+          <div className="text-[27px] font-bold pt-16">
             Installation/Maintenance
           </div>
           <div className="text-lg font-semibold pt-16">
