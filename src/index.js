@@ -13,10 +13,12 @@ import Footer from './components/Footer';
 import Wind from './pages/wind';
 import Geothermal from './pages/geothermal';
 import References from './pages/references';
+import { Analytics } from "@vercel/analytics/react"
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <BrowserRouter>
+      <Analytics/>
       <ScrollToTop/>
       <Navbar />
       <Routes>
