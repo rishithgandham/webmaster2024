@@ -12,6 +12,7 @@ import Footer from './components/Footer';
 
 import Wind from './pages/wind';
 import Geothermal from './pages/geothermal';
+import References from './pages/references';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
@@ -23,6 +24,7 @@ root.render(
         <Route path="/solar" element={<Solar />} />
         <Route path='/wind' element={<Wind/>}/>
         <Route path='/geothermal' element={<Geothermal/>}/>
+        <Route path='/references' element={<References/>}/>
       </Routes>
       
       <Footer />

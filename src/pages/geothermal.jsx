@@ -7,7 +7,7 @@ import geothermal_gif from "./Geothermal-heat-pump-GHP-in-Winter-Summer.gif";
 import geothermal_img from "./photo-1610720707798-6fe21dc165ba.avif";
 import geothermal_img_two from "./CI_Map_geothermalnrel_US_133_161003.jpg";
 import geothermal_img_three from "./Geothermal-Energy-Costs.jpg";
-const Wind = () => {
+const Geothermal = () => {
 
 
   useEffect(() => () => { // <-- Now we return the useEffect teardown effect, which will be fired only after the path/search change for the first time
@@ -533,4 +533,4 @@ const Wind = () => {
     </>
   );
 };
-export default Wind;
+export default Geothermal;
