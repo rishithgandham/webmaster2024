@@ -41,7 +41,7 @@ export default function References(props) {
 
             </div>
 
-            <div className="md:text-2xl text-xl text-center font-bold lg:px-72 mb-20">This website was made entirely by our team using the javascript framework react and css styling library tailwind, view <span><a href="https://github.com/rishithgandham/webmaster2024" className='underline'>source code</a></span> here.</div>
+            <div className="md:text-2xl text-xl text-center font-bold lg:px-72 mb-20">This website was programmed entirely by our team using the javascript framework react and css styling library tailwind, view <span><a href="https://github.com/rishithgandham/webmaster2024" className='underline'>source code</a></span> here.</div>
 
         </motion.div>
       </main>
