@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-no-target-blank */
 import {
     CopyrightIcon,
   Facebook,
@@ -21,12 +22,12 @@ export default function Footer(props) {
           {/* links buttons */}
           <div className="flex justify-between items-center  gap-x-3 ">
             
-            <a href='https://github.com/rishithgandham/webmaster2024'><Icon icon={<GithubIcon size={13}/>}/></a>
-            <a href='mailto:evergreen@gmail.com'><Icon icon={<Mail size={13}/>}/></a>
-            <a href='https://instagram.com'><Icon icon={<Instagram size={13}/>}/></a>
-            <a href='https://twitter.com'><Icon icon={<Twitter size={13}/>}/></a>
-            <a href='https://facebook.com'><Icon icon={<Facebook size={13}/>}/></a>
-            <a href='https://youtube.com'><Icon icon={<Youtube size={13}/>}/></a>
+            <a target='_blank' href='https://github.com/rishithgandham/webmaster2024'><Icon icon={<GithubIcon size={13}/>}/></a>
+            <a target='_blank'href='mailto:evergreen@gmail.com'><Icon icon={<Mail size={13}/>}/></a>
+            <a target='_blank'href='https://instagram.com'><Icon icon={<Instagram size={13}/>}/></a>
+            <a target='_blank'href='https://twitter.com'><Icon icon={<Twitter size={13}/>}/></a>
+            <a target='_blank'href='https://facebook.com'><Icon icon={<Facebook size={13}/>}/></a>
+            <a target='_blank'href='https://youtube.com'><Icon icon={<Youtube size={13}/>}/></a>
             
             
             
