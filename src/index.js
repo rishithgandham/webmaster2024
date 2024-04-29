@@ -14,6 +14,7 @@ import Wind from './pages/wind';
 import Geothermal from './pages/geothermal';
 import References from './pages/references';
 import { Analytics } from "@vercel/analytics/react"
+import SolarCalculatorPage from './pages/solar_calculator';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
@@ -24,6 +25,7 @@ root.render(
       <Routes>
         <Route path="/" element={<App />} />
         <Route path="/solar" element={<Solar />} />
+        <Route path="/calculator" element={<SolarCalculatorPage />} />
         <Route path='/wind' element={<Wind/>}/>
         <Route path='/geothermal' element={<Geothermal/>}/>
         <Route path='/references' element={<References/>}/>

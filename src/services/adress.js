@@ -1,14 +1,11 @@
 import { Loader } from '@googlemaps/js-api-loader';
 import { findClosestBuildingInsights } from '@nora-soderlund/google-maps-solar-api';
-import { ChevronsRightLeft, Minimize } from 'lucide-react';
 
 const loader = new Loader({
-  apiKey: 'AIzaSyB5wj2YLwcSSbwi4JlMVuP3mqHdgJMQ-ks',
+  apiKey: process.env.REACT_APP_GOOGLE,
   version: 'weekly',
 });
 
-const places = loader.importLibrary('places');
-const solar = loader.importLibrary('');
 
 const {
   AutocompleteService,
@@ -81,6 +78,7 @@ export async function getInsights(lat, long, panel_count, monthly_energy) {
   const yearlyEnergy =
     configs[Math.min(panel_count, configs[configs.length - 1].panelsCount) - 4]
       .yearlyEnergyDcKwh;
+  const maxYearlyEnergy = configs[configs.length - 1].yearlyEnergyDcKwh
   console.log(yearlyEnergy)
 
   return {
@@ -89,13 +87,14 @@ export async function getInsights(lat, long, panel_count, monthly_energy) {
     maxPanelCount: maxPanelCount,
     c02saving: c02saving,
     yearlyEnergy: yearlyEnergy,
-    panel_count: panel_count,
+    panelCount: panel_count,
+    maxYearlyEnergy: maxYearlyEnergy
   };
 }
 
 export async function fetchInsights(lat, long) {
   return await findClosestBuildingInsights(
-    'AIzaSyB5wj2YLwcSSbwi4JlMVuP3mqHdgJMQ-ks',
+    process.env.REACT_APP_GOOGLE,
     {
       location: {
         latitude: lat,

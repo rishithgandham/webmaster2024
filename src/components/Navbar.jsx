@@ -1,5 +1,6 @@
 import { Menu, Transition } from '@headlessui/react';
 import {
+  CalculatorIcon,
   ChevronDownIcon,
   ChevronFirst,
   ChevronLast,
@@ -63,6 +64,17 @@ function EnergyMenu(props) {
               >
                 Geothermal
                 <Earth size={13} />
+              </Link>
+            </Menu.Item>
+          </div>
+          <div className="px-1 py-1 ">
+            <Menu.Item>
+              <Link
+                to="/calculator"
+                className={`text-black hover:bg-gray-300 group flex justify-between w-full h-full items-center rounded-md px-2 py-2 text-xs font-bold`}
+              >
+                Solar Calculator
+                <CalculatorIcon size={13} />
               </Link>
             </Menu.Item>
           </div>

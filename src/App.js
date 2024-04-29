@@ -11,10 +11,10 @@ function App() {
           <p className="text-lg  font-bold text-center">
             VIRGINIA STATE CONFERENCE 2024 - Hampton, Virginia
           </p>
-          <div className=" mt-5 sm:flex hidden">
-            <div className="relative rounded-full  text-xs leading-6 ring-1 ring-white py-[2px] px-4 hover:scale-[102%] transition-all ease-in-out ">
+          <div className=" mt-5 sm:flex font-bold hidden">
+            <div className="relative rounded-full scale-110 text-xs leading-6 ring-1 ring-white py-[2px] px-4 hover:scale-[102%] transition-all ease-in-out ">
               Announcing our solar energy calculator{' '}
-              <a href="/" className={`font-semibold green-gradient`}>
+              <a href="/calculator" className={`font-semibold green-gradient`}>
                 <span className="absolute inset-0" aria-hidden="true" />
                 Try it out! <span aria-hidden="true">&rarr;</span>
               </a>
