@@ -2,9 +2,7 @@ import React, { useEffect } from 'react';
 import { motion } from 'framer-motion';
 import logo from './logo.png';
 import map from './map.png';
-import geothermal_start from './Geothermal-Power-Plant.png.webp';
 import geothermal_gif from './Geothermal-heat-pump-GHP-in-Winter-Summer.gif';
-import geothermal_img from './photo-1610720707798-6fe21dc165ba.avif';
 import geothermal_img_two from './CI_Map_geothermalnrel_US_133_161003.jpg';
 import geothermal_img_three from './Geothermal-Energy-Costs.jpg';
 const Geothermal = () => {
@@ -68,7 +66,7 @@ const Geothermal = () => {
             </div>
           </div>
           <div className="image w-full my-10 ">
-            <motion.img
+            {/* <motion.img
               variants={variants}
               initial="hidden"
               animate="visible"
@@ -77,7 +75,7 @@ const Geothermal = () => {
               src={geothermal_start}
               alt="geothermal_start"
               className="wind rounded-3xl aspect-video object-cover"
-            />
+            /> */}
           </div>
           <motion.div
             variants={variants}
@@ -195,7 +193,7 @@ const Geothermal = () => {
                 alt="geothermal_gif"
                 className="wind rounded-3xl aspect-sqaure h-full object-cover"
               />
-              <motion.div ariants={variants} initial="hidden" animate="visible">
+              <motion.div variants={variants} initial="hidden" animate="visible">
                 <div className="mb-4 flex justify-center text-xs font-bold mt-2">
                   {' '}
                   Geothermal energy is capable of running in all seasons{' '}
@@ -242,7 +240,7 @@ const Geothermal = () => {
               </div>
             </motion.div>
             <div className="image w-full">
-              <motion.img
+              {/* <motion.img
                 variants={variants}
                 initial="hidden"
                 animate="visible"
@@ -251,7 +249,7 @@ const Geothermal = () => {
                 src={geothermal_img}
                 alt="geothermal_img"
                 className="wind rounded-3xl aspect-sqaure h-full object-cover"
-              />
+              /> */}
             </div>
             <motion.div
               variants={variants}
@@ -554,7 +552,7 @@ function GeothermalNew() {
           {/* image */}
           <div className="w-full flex  my-10 justify-center items-center ">
             <img
-              src="/images/new_geothermal.jpg"
+              src="/images/geothermal.webp"
               className="aspect-video w-full rounded-lg shadow-xl"
               alt="solar panel home"
             ></img>
