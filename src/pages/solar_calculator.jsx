@@ -53,7 +53,7 @@ export default function SolarCalculatorPage(props) {
               <span className="text-[#34A853]">l</span>
               <span className="text-[#EA4335]">e</span> solar API
             </p>
-            <p className="text-xs font-semibold mt-2 w-3/4">
+            <p className="text-xs font-semibold mt-2 lg:w-3/4 w-full">
               The Google Solar API utilizes maps data to precisely analyze a
               roof's solar potential, integrating geographical information with
               advanced algorithms. By assessing factors like roof area,
