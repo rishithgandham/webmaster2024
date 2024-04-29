@@ -20,12 +20,16 @@ export default function Footer(props) {
         <div className="flex justify-center items-center flex-col">
           {/* links buttons */}
           <div className="flex justify-between items-center  gap-x-3 ">
-            <Icon icon={<GithubIcon size={13}/>}/>
-            <Icon icon={<Mail size={13}/>}/>
-            <Icon icon={<Instagram size={13}/>}/>
-            <Icon icon={<Twitter size={13}/>}/>
-            <Icon icon={<Facebook size={13}/>}/>
-            <Icon icon={<Youtube size={13}/>}/>
+            
+            <a href='https://github.com/rishithgandham/webmaster2024'><Icon icon={<GithubIcon size={13}/>}/></a>
+            <a href='mailto:evergreen@gmail.com'><Icon icon={<Mail size={13}/>}/></a>
+            <a href='https://instagram.com'><Icon icon={<Instagram size={13}/>}/></a>
+            <a href='https://twitter.com'><Icon icon={<Twitter size={13}/>}/></a>
+            <a href='https://facebook.com'><Icon icon={<Facebook size={13}/>}/></a>
+            <a href='https://youtube.com'><Icon icon={<Youtube size={13}/>}/></a>
+            
+            
+            
             
           </div>
           <Leaf  size={50} className='my-10 text-emerald-950'/>
@@ -50,12 +54,11 @@ export default function Footer(props) {
 function Icon({icon}) {
   return (
     <>
-      <a
-        href="http://"
+      <div
         className="w-10 h-10  font-extrabold rounded-xl hover:scale-110 transition-all ease-in-out flex justify-center items-center border border-white p-2"
       >
         {icon}
-      </a>
+      </div>
     </>
   );
 }
@@ -120,28 +123,28 @@ export function NotFooter(props) {
             <div className="flex  items-center h-full flex-col px-5">
               <p className="font-bold text-xs">Socials</p>
               <a
-                href="https://github.com/rishithgandham/webmaster2024"
+                href="https://instagram.com"
                 className="flex items-center hover:bg-slate-50 transition-all mt-5 rounded-md py-1 px-2  ease-in-out hover:scale-110"
               >
                 <Instagram size={13} />{' '}
                 <p className="text-xs font-bold pl-3">Instagram</p>
               </a>
               <a
-                href="/pdf/citations"
+                href="https://twitter.com"
                 className="flex items-center hover:bg-slate-50 transition-all mt-5 rounded-md py-1 px-2  ease-in-out hover:scale-110"
               >
                 <Twitter size={13} />
                 <p className="text-xs font-bold pl-3">Twitter</p>
               </a>
               <a
-                href="mailto:greenenergy@gmail.com"
+                href="https://facebook.com"
                 className="flex items-center hover:bg-slate-50 transition-all mt-5 rounded-md py-1 px-2  ease-in-out hover:scale-110"
               >
                 <Facebook size={13} />
                 <p className="text-xs font-bold pl-3">Facebook</p>
               </a>
               <a
-                href="mailto:greenenergy@gmail.com"
+                href="youtube.com"
                 className="flex items-center hover:bg-slate-50 transition-all mt-5 rounded-md py-1 px-2  ease-in-out hover:scale-110"
               >
                 <Youtube size={13} />
@@ -156,7 +159,7 @@ export function NotFooter(props) {
                 Documents (TSA)
               </p>
               <a
-                href="https://github.com/rishithgandham/webmaster2024"
+                href="/pdf/plan.pdf"
                 className="flex items-center hover:bg-slate-50 transition-all  rounded-md py-1 px-2  ease-in-out hover:scale-110"
               >
                 <p className="text-xs font-bold  underline text-center">
@@ -164,7 +167,7 @@ export function NotFooter(props) {
                 </p>
               </a>
               <a
-                href="/pdf/citations"
+                href="/pdf/student-copyright-checklist.pdf"
                 className="flex items-center hover:bg-slate-50 transition-all  rounded-md py-1 px-2  ease-in-out hover:scale-110"
               >
                 <p className="text-xs font-bold   underline text-center">
