@@ -30,12 +30,11 @@ export default function Footer(props) {
           </div>
           <Leaf  size={50} className='my-10 text-emerald-950'/>
 
-          <div className="grid grid-cols-4 md:w-2/4 w-full  gap-x-10 underline text-xs font-semibold text-gray-700 ">
+          <div className="grid grid-cols-3 md:w-2/4 w-full  gap-x-10 underline text-xs font-semibold text-gray-700 ">
 
-            <p className=" text-center ">Portfolio</p>
-            <p className=" text-center ">Student Copyright</p>
-            <p className=" text-center ">Plan of Worklog</p>
-            <p className=" text-center ">Citations</p>
+            <a href="/pdf/student-copyright-checklist.pdf" target="_blank"className=" text-center ">Student Copyright</a>
+            <a href="/pdf/citations.pdf" target="_blank"className=" text-center ">Citations</a>
+            <a href="/pdf/plan.pdf" target="_blank"className=" text-center ">Plan of Worklog</a>
           </div>
           <div className="flex justify-between items-center text-[10px] font-bold text-gray-700 gap-x-3 mt-5">
           <CopyrightIcon size={10} />

@@ -668,7 +668,7 @@ function WindNew() {
 
             {/* image vertical wind turbine */}
 
-            <div className="w-full  h-full  items-center ">
+            <div className="w-full  h-full  items-center mt-10">
               <img
                 src="/images/wind_turbine.jpg"
                 className=" w-full h-full rounded-lg shadow-xl"
@@ -704,7 +704,7 @@ function WindNew() {
 
             {/* grid connected */}
             <div>
-              <div className="text-2xl font-bold md:mt-0 mt-10">Grid-connected Systems</div>
+              <div className="text-2xl font-bold  mt-10">Grid-connected Systems</div>
               <div className="text-lg font-semibold pt-10">
                 Small wind energy turbines can be connected to external
                 electricity systems like the grid. This makes it so that you can
@@ -729,7 +729,7 @@ function WindNew() {
               </div>
             </div>
             {/* image */}
-            <div className="w-full  aspect-video h-full md:mt-0 mt-10 ">
+            <div className="w-full  aspect-video h-full  mt-10 ">
               <img
                 src="/images/off_the_grid.avif"
                 className=" w-full h-full rounded-lg shadow-xl"
@@ -809,7 +809,7 @@ function WindNew() {
 
           <div className="flex justify-center pt-20 pb-10   ">
             <iframe
-              src="https://www.youtube.com/embed/-36VWp9Sf4A?si=2VawjHM5mBTeq-1q"
+              src="https://www.youtube.com/embed/xy9nj94xvKA?si=FTGuqJeTZPkyAAHL  "
               title="YouTube video player"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen

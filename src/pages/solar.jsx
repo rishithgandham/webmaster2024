@@ -1,5 +1,7 @@
 import { motion } from 'framer-motion';
 import React, { useEffect } from 'react';
+import '../services/adress'
+import SolarCalculator from '../components/SolarCalculator';
 
 const variants = {
   hidden: { opacity: 0, y: 50 },
@@ -225,6 +227,8 @@ const Solar = () => {
             ></iframe>
           </div>
         </motion.div>
+        <SolarCalculator/>
+        
       </main>
     </>
   );

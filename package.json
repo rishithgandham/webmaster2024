@@ -3,8 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@googlemaps/js-api-loader": "^1.16.6",
     "@headlessui/react": "^1.7.18",
     "@material-tailwind/react": "^2.1.9",
+    "@nora-soderlund/google-maps-solar-api": "^1.1.2",
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
@@ -45,6 +47,7 @@
   },
   "devDependencies": {
     "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
+    "@types/google.maps": "^3.55.7",
     "tailwindcss": "^3.4.1"
   }
 }
