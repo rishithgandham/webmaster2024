@@ -1,5 +1,6 @@
 import './App.css';
 import { Link } from 'react-router-dom';
+import EnergyQuiz from './components/EnergyQuiz';
 
 function App() {
   return (
@@ -60,6 +61,9 @@ function App() {
               ></img>
             </div>
           </div>
+          
+
+          <EnergyQuiz/>
         </div>
       </main>
 

@@ -7,6 +7,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Tauri&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
 
+
+option, input, select {
+  color: black;
+}
+
+
+
 #root {
 
   font-family: "Inter", sans-serif;
