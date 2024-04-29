@@ -34,7 +34,7 @@ const Wind = () => {
     { name: 'Wind Farm 2', location: { lat: 40.7128, lng: -74.006 } },
     { name: 'Wind Farm 3', location: { lat: -33.8688, lng: 151.2093 } },
   ];
-  const locations = ['Virginia', 'Texas', 'California'];
+  // const locations = ['Virginia', 'Texas', 'California'];
 
   const handleCheckout = () => {
     console.log('Checkout process initiated...');
