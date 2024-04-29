@@ -102,7 +102,7 @@ const Solar = () => {
           <div className="text-3xl font-bold pt-20 ">
             Solar Panel Information
           </div>
-          <div className="grid w-full lg:grid-cols-2 grid-cols-1 pt-16 gap-x-20">
+          <div className="grid w-full 2xl:grid-cols-2 grid-cols-1 pt-16 gap-x-20">
             {/* content */}
             <div>
               <div className="text-2xl font-bold ">
@@ -132,7 +132,7 @@ const Solar = () => {
             </div>
 
             {/* image */}
-            <div className="w-full flex  mt-5 md:mt-0 justify-center items-center ">
+            <div className="w-full flex  mt-5 2xl:mt-0 justify-center items-center ">
               <img
                 src="/images/solar_panel_tiles.avif"
                 className="aspect-square w-full rounded-lg shadow-xl"
@@ -187,9 +187,9 @@ const Solar = () => {
             Estimated savings over time
           </div>
 
-          <div className="grid w-full lg:grid-cols-2 grid-cols-1 pt-16 gap-x-20">
+          <div className="grid w-full 2xl:grid-cols-2 grid-cols-1 pt-16 gap-x-20">
             {/* image */}
-            <div className="w-full flex mb-5 md:mb-0  justify-center items-center ">
+            <div className="w-full flex mb-5 2xl:mb-0  justify-center items-center ">
               <img
                 src="/images/solar_home_roof.avif"
                 className="aspect-auto w-full rounded-lg shadow-xl"

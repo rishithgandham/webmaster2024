@@ -7,7 +7,7 @@ function App() {
     <>
       <main className=" h-screen  w-full border-t-0  bg-black text-white landing">
         <div className="h-full flex justify-center flex-col  items-center ">
-          <p className="text-5xl font-bold green-gradient pb-5">Green Energy</p>
+          <p className="text-5xl font-bold green-gradient pb-5">Evergreen</p>
           <p className="text-lg  font-bold text-center">
             VIRGINIA STATE CONFERENCE 2024 - Hampton, Virginia
           </p>

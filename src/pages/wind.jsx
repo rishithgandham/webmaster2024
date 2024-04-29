@@ -622,7 +622,7 @@ function WindNew() {
             Components of a wind turbine
           </div>
 
-          <div className="grid lg:grid-cols-2 grid-cols-1 gap-x-10 pt-16">
+          <div className="grid 2xl:grid-cols-2 grid-cols-1 gap-x-10 pt-16">
             {/* components */}
 
             <div className="">
@@ -656,7 +656,7 @@ function WindNew() {
               </div>
 
               {/* other */}
-              <div className="text-2xl font-bold pt-16">Other</div>
+              <div className="text-3xl font-bold pt-16">Other</div>
               <div className="text-lg font-semibold pt-10">
                 Other components depend on whether your wind turbine is
                 grid-connected, stand alone, or hybrid. Some components you
@@ -668,7 +668,7 @@ function WindNew() {
 
             {/* image vertical wind turbine */}
 
-            <div className="w-full  h-full  items-center mt-10">
+            <div className="w-full  h-full  items-center 2xl:mt-0 mt-10">
               <img
                 src="/images/wind_turbine.jpg"
                 className=" w-full h-full rounded-lg shadow-xl"
@@ -692,7 +692,7 @@ function WindNew() {
           <div className="text-3xl font-bold pt-16">
             Types of wind turbine systems
           </div>
-          <div className="grid lg:grid-cols-2 grid-cols-1 pt-10 gap-x-10">
+          <div className="grid 2xl:grid-cols-2 grid-cols-1 pt-10 gap-x-10">
             {/* image */}
             <div className="w-full  aspect-video h-full  ">
               <img
@@ -715,7 +715,7 @@ function WindNew() {
               </div>
             </div>
           </div>
-          <div className="grid lg:grid-cols-2 grid-cols-1 pt-10 gap-x-10">
+          <div className="grid 2xl:grid-cols-2 grid-cols-1 pt-10 gap-x-10">
             {/* off the grid */}
             <div>
               <div className="text-2xl font-bold">Off the grid systems</div>
