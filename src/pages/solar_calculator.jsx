@@ -73,7 +73,7 @@ export default function SolarCalculatorPage(props) {
 
           <div className="w-full my-5">
             <label className="mb-3 ml-1 text-xs font-bold">
-              Panel Count (if above max, it will calculate for max)
+              Panel Count (if above max, it will calculate for max, has to be greater than 4)
             </label>
             <input
               type="number"
@@ -88,7 +88,7 @@ export default function SolarCalculatorPage(props) {
 
           <button
             className="py-2 px-3 font-bold bg-green-500 text-white rounded-xl shadow-xl text-xs hover:scale-105 transition-all ease-in-out"
-            disabled={!placeDetail || !panelCount}
+            disabled={!placeDetail || !(panelCount*1 > 4)}
             onClick={handleSubmit}
           >
             Calculate

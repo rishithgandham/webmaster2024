@@ -87,7 +87,7 @@ export async function getInsights(lat, long, panel_count, monthly_energy) {
     maxPanelCount: maxPanelCount,
     c02saving: c02saving,
     yearlyEnergy: yearlyEnergy,
-    panelCount: panel_count,
+    panelCount: Math.min(panel_count, configs[configs.length - 1].panelsCount),
     maxYearlyEnergy: maxYearlyEnergy
   };
 }

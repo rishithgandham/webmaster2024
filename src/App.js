@@ -1,14 +1,38 @@
 import './App.css';
 import { Link } from 'react-router-dom';
 import EnergyQuiz from './components/EnergyQuiz';
+import { motion } from 'framer-motion';
 
 function App() {
+  const variants = {
+    hidden: { opacity: 0, y: 50 },
+    visible: { opacity: 1, y: 0, transition: { duration: 1 } },
+  };
   return (
     <>
-      <main className=" h-screen  w-full border-t-0  bg-black text-white landing">
-        <div className="h-full flex justify-center flex-col  items-center ">
+      <main className="h-screen  w-full border-t-0  bg-black text-white landing">
+        <motion.div
+          className="h-full flex justify-center flex-col  items-center "
+          initial="hidden"
+          animate="visible"
+          variants={variants}
+        >
           <p className="text-5xl font-bold green-gradient pb-5">Evergreen</p>
-          <p className="text-lg  font-bold text-center">
+          <p
+            className={`text-2xl font-extrabold tracking-tight text-center mx-5  sm:text-4xl kalam-bold mb-5 mt-3`}
+          >
+            Illuminate Your Path to Sustainability, {' '}
+            <p className="font-bold inline green-gradient">
+              Staying Evergreen
+            </p>
+          </p>
+
+          <img
+            src="/images/landing_solar.jpg"
+            className="h-1/4 mx-20  rounded-3xl md:block hidden aspect-video mb-10 my-2"
+            alt=""
+          ></img>
+          <p className="text-lg  font-bold mx-5 text-center">
             VIRGINIA STATE CONFERENCE 2024 - Hampton, Virginia
           </p>
           <div className=" mt-5 sm:flex font-bold hidden">
@@ -20,12 +44,8 @@ function App() {
               </a>
             </div>
           </div>
-          <img
-            src="/images/landing_solar.jpg"
-            className="h-[4/10] lg:h-1/2 mx-20  rounded-3xl md:block hidden aspect-video mt-10"
-            alt=""
-          ></img>
-        </div>
+          
+        </motion.div>
       </main>
 
       <main className="   w-full border-t-0  bg-gradient-to-b from-black to-slate-950 text-white landing pb-32">
@@ -61,9 +81,8 @@ function App() {
               ></img>
             </div>
           </div>
-          
 
-          <EnergyQuiz/>
+          <EnergyQuiz />
         </div>
       </main>
 
