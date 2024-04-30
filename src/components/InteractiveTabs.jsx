@@ -110,6 +110,7 @@ export function InteractiveTabsGeothermal() {
                   >
                     <Link
                       className="w-full flex justify-between gap-x-5"
+                      target='_blank'
                       to={post.href}
                     >
                       <h3 className="text-sm font-medium leading-5">
@@ -223,6 +224,8 @@ export function InteractiveTabsWind() {
                   >
                     <Link
                       className="w-full flex justify-between gap-x-5"
+                      target='_blank'
+
                       to={post.href}
                     >
                       <h3 className="text-sm font-medium leading-5">

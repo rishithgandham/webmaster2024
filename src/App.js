@@ -29,7 +29,7 @@ function App() {
 
           <img
             src="/images/landing_solar.jpg"
-            className="h-1/4 mx-20  rounded-3xl md:block hidden aspect-video mb-10 my-2"
+            className="h-3/8 mx-20  rounded-3xl md:block hidden aspect-video mb-10 my-2"
             alt=""
           ></img>
           <p className="text-lg  font-bold mx-5 text-center">
