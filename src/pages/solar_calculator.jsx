@@ -25,8 +25,9 @@ export default function SolarCalculatorPage(props) {
   async function handleSubmit() {
     const lat = placeDetail.geometry.location.lat();
     const long = placeDetail.geometry.location.lng();
+    const address = placeDetail.formatted_address;
 
-    const insights = await getInsights(lat, long, panelCount);
+    const insights = await getInsights(lat, long, panelCount, address);
 
     setInsights(insights);
   }
@@ -98,7 +99,7 @@ export default function SolarCalculatorPage(props) {
                 <hr className='mt-10' />
               <div className="my-20 mx-5">
                 <p className="text-center sm:text-xl md:text-3xl lg:text-4xl mb-10 font-bold text-white">
-                  Solar Analysis of {placeDetail.formatted_address}
+                  Solar Analysis of {insights.address}
                 </p>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-x-5 gap-y-5 md:grid-rows-3 w-full">

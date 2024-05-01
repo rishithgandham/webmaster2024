@@ -64,7 +64,7 @@ export function getNewToken() {
 
 // return annual sunshine, roof area, max panel cound, C02 savings, monetary savings, break even year.
 
-export async function getInsights(lat, long, panel_count, monthly_energy) {
+export async function getInsights(lat, long, panel_count, address) {
   const insights = await fetchInsights(lat, long);
   console.log(insights)
 
@@ -88,7 +88,8 @@ export async function getInsights(lat, long, panel_count, monthly_energy) {
     c02saving: c02saving,
     yearlyEnergy: yearlyEnergy,
     panelCount: Math.min(panel_count, configs[configs.length - 1].panelsCount),
-    maxYearlyEnergy: maxYearlyEnergy
+    maxYearlyEnergy: maxYearlyEnergy,
+    address: address
   };
 }
 
