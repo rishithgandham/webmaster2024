@@ -1,13 +1,13 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { useState, useRef, useEffect } from 'react';
+import React from "react";
+import { motion } from "framer-motion";
+import { useState, useRef, useEffect } from "react";
 
 import {
   getInsights,
   getNewToken,
   getSuggestions,
   getPlaceDetail,
-} from '../services/adress';
+} from "../services/adress";
 
 export default function SolarCalculatorPage(props) {
   const [placeDetail, setPlaceDetail] = useState({});
@@ -74,12 +74,13 @@ export default function SolarCalculatorPage(props) {
 
           <div className="w-full my-5">
             <label className="mb-3 ml-1 text-xs font-bold">
-              Panel Count (if above max, it will calculate for max, has to be greater than 4)
+              Panel Count (if above max, it will calculate for max, has to be
+              greater than 4)
             </label>
             <input
               type="number"
               className="px-3 w-full py-2   rounded-xl text-black"
-              onChange={e => {
+              onChange={(e) => {
                 setPanelCount(e.target.value);
               }}
               value={panelCount}
@@ -89,14 +90,14 @@ export default function SolarCalculatorPage(props) {
 
           <button
             className="py-2 px-3 font-bold bg-green-500 text-white rounded-xl shadow-xl text-xs hover:scale-105 transition-all ease-in-out"
-            disabled={!placeDetail || !(panelCount*1 > 4)}
+            disabled={!placeDetail || !(panelCount * 1 > 4)}
             onClick={handleSubmit}
           >
             Calculate
           </button>
           {insights ? (
             <>
-                <hr className='mt-10' />
+              <hr className="mt-10" />
               <div className="my-20 mx-5">
                 <p className="text-center sm:text-xl md:text-3xl lg:text-4xl mb-10 font-bold text-white">
                   Solar Analysis of {insights.address}
@@ -106,7 +107,7 @@ export default function SolarCalculatorPage(props) {
                   {/* TOP ROW */}
                   <div className="md:col-start-1 md:row-start-1 transition-all ease-in-out hover:scale-[102%]">
                     <p className="text-left font-bold text-md ml-1 mb-3">
-                      {' '}
+                      {" "}
                       Panels
                     </p>
                     <div className="w-full h-40 flex justify-center  items-center border rounded-xl  border-white  text-2xl font-bold">
@@ -116,12 +117,12 @@ export default function SolarCalculatorPage(props) {
                   </div>
                   <div className="md:col-start-2 md:row-start-1 transition-all ease-in-out hover:scale-[102%]">
                     <p className="text-left font-bold text-md ml-1 mb-3">
-                      {' '}
+                      {" "}
                       Energy (Kwh)
                     </p>
                     <div className="w-full h-40 flex justify-center  items-center border rounded-xl  border-white  text-2xl font-bold">
-                      {Math.round(insights.yearlyEnergy)} /{' '}
-                      {Math.round(insights.maxYearlyEnergy)}  Kwh
+                      {Math.round(insights.yearlyEnergy)} /{" "}
+                      {Math.round(insights.maxYearlyEnergy)} Kwh
                     </div>
                   </div>
                   {/* END OF TOP ROW */}
@@ -129,7 +130,7 @@ export default function SolarCalculatorPage(props) {
                   {/*  2 ROW */}
                   <div className="md:col-start-1 md:row-start-2 transition-all ease-in-out hover:scale-[102%]">
                     <p className="text-left font-bold text-md ml-1 mb-3">
-                      {' '}
+                      {" "}
                       Roof Area (meters<span>&#178;</span>)
                     </p>
                     <div className="w-full h-40 flex justify-center  items-center border rounded-xl  border-white  text-2xl font-bold">
@@ -138,7 +139,7 @@ export default function SolarCalculatorPage(props) {
                   </div>
                   <div className="md:col-start-2 md:row-start-2 transition-all ease-in-out hover:scale-[102%]">
                     <p className="text-left font-bold text-md ml-1 mb-3">
-                      {' '}
+                      {" "}
                       Annual Sunshine (Hours)
                     </p>
                     <div className="w-full h-40 flex justify-center  items-center border rounded-xl  border-white  text-2xl font-bold">
@@ -149,17 +150,18 @@ export default function SolarCalculatorPage(props) {
 
                   <div className=" md:col-span-2  transition-all ease-in-out hover:scale-[102%]">
                     <p className="text-left font-bold text-md ml-1 mb-1">
-                      {' '}
+                      {" "}
                       Carbon Offset (kg)
                     </p>
                     <p className="text-left font-bold text-sm ml-1 mb-3">
-                      {' '}
+                      {" "}
                       Equivalent amount of CO2 produced per MWh of grid
                       electricity. This is a measure of the carbon intensity of
                       grid electricity displaced by solar electricity.
                     </p>
                     <div className="w-full h-40 flex justify-center bg-opacity-40 bg-green-600 items-center border rounded-xl  border-white  md:text-2xl text-xs font-bold">
-                      {Math.round(insights.c02saving)} kg per MWh of grid electricity 
+                      {Math.round(insights.c02saving)} kg per MWh of grid
+                      electricity
                     </div>
                   </div>
                 </div>
@@ -168,6 +170,11 @@ export default function SolarCalculatorPage(props) {
           ) : (
             <></>
           )}
+          <script
+            async
+            src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3975856365207951"
+            crossorigin="anonymous"
+          ></script>
         </motion.div>
       </main>
     </>
@@ -176,7 +183,7 @@ export default function SolarCalculatorPage(props) {
 
 function AutocompleteInput({ setPlaceDetail, placeDetail }) {
   const [suggestions, setSuggestions] = useState([]);
-  const [input, setInput] = useState('');
+  const [input, setInput] = useState("");
   const tokenRef = useRef();
 
   //   control api calls? -> setTimeout()?
@@ -217,7 +224,7 @@ function AutocompleteInput({ setPlaceDetail, placeDetail }) {
         <input
           type="text"
           className="px-3 w-full py-2   rounded-xl text-black"
-          onChange={e => {
+          onChange={(e) => {
             populateSuggestions(e.target.value);
             setInput(e.target.value);
 

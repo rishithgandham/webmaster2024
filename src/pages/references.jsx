@@ -1,5 +1,5 @@
-import { motion } from 'framer-motion';
-import React from 'react';
+import { motion } from "framer-motion";
+import React from "react";
 
 const variants = {
   hidden: { opacity: 0, y: 50 },
@@ -24,7 +24,11 @@ export default function References(props) {
           <div className="grid lg:grid-cols-2 lg:grid-rows-2 grid-cols-1 w-full h-full">
             <div className="lg:col-start-1 lg:row-start-1 mt-10 col-span-1 flex flex-col items-center ">
               <p className="text-center font-bold text-2xl">Works Cited</p>
-              <a href="/pdf/citations.pdf" target="_blank"className="flex justify-center">
+              <a
+                href="/pdf/citations.pdf"
+                target="_blank"
+                className="flex justify-center"
+              >
                 <img
                   src="/images/citations_image.png"
                   className="w-5/12 rounded-xl mt-5 aspect-auto  hover:scale-[102%] transition-all ease-in-out"
@@ -34,7 +38,11 @@ export default function References(props) {
             </div>
             <div className="lg:col-start-1 lg:row-start-2  mt-10 col-span-1 flex flex-col items-center ">
               <p className="text-center font-bold text-2xl">Plan of work log</p>
-              <a href="/pdf/plan.pdf" target="_blank" className="flex justify-center">
+              <a
+                href="/pdf/plan.pdf"
+                target="_blank"
+                className="flex justify-center"
+              >
                 <img
                   src="/images/plan.png"
                   className="w-5/12 rounded-xl mt-5 aspect-auto  hover:scale-[102%] transition-all ease-in-out"
@@ -43,8 +51,14 @@ export default function References(props) {
               </a>
             </div>
             <div className="lg:col-start-2 lg:row-start-1 mt-10 col-span-1 flex flex-col items-center ">
-              <p className="text-center font-bold text-2xl">Student Copyright</p>
-              <a href="/pdf/student-copyright-checklist.pdf" target="_blank" className="flex justify-center">
+              <p className="text-center font-bold text-2xl">
+                Student Copyright
+              </p>
+              <a
+                href="/pdf/student-copyright-checklist.pdf"
+                target="_blank"
+                className="flex justify-center"
+              >
                 <img
                   src="/images/student.png"
                   className="w-5/12 rounded-xl mt-5 aspect-auto  hover:scale-[102%] transition-all ease-in-out"
@@ -56,7 +70,7 @@ export default function References(props) {
 
           <div className="md:text-2xl text-xl text-center font-bold lg:px-72 mt-20 mb-20">
             This website was programmed entirely by our team using the
-            javascript framework react and css styling library tailwind, view{' '}
+            javascript framework react and css styling library tailwind, view{" "}
             <span>
               <a
                 href="https://github.com/rishithgandham/webmaster2024"
@@ -64,9 +78,14 @@ export default function References(props) {
               >
                 source code
               </a>
-            </span>{' '}
+            </span>{" "}
             here.
           </div>
+          <script
+            async
+            src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3975856365207951"
+            crossorigin="anonymous"
+          ></script>
         </motion.div>
       </main>
     </>

@@ -1,7 +1,7 @@
 /* eslint-disable react/jsx-no-target-blank */
-import { motion } from 'framer-motion';
+import { motion } from "framer-motion";
 
-import { InteractiveTabsGeothermal} from '../components/InteractiveTabs';
+import { InteractiveTabsGeothermal } from "../components/InteractiveTabs";
 
 // export default Geothermal;
 
@@ -32,7 +32,6 @@ function GeothermalNew() {
           </div>
 
           <InteractiveTabsGeothermal />
-
 
           {/* overview */}
           <div className="text-3xl font-bold pt-10 ">Overview</div>
@@ -217,7 +216,6 @@ function GeothermalNew() {
             Related Videos and Interactives
           </div>
 
-
           <div className="flex justify-center pt-20 pb-10   ">
             <iframe
               src="https://www.youtube.com/embed/-36VWp9Sf4A?si=2VawjHM5mBTeq-1q"
@@ -227,6 +225,11 @@ function GeothermalNew() {
               className="rounded-3xl aspect-video  w-full"
             ></iframe>
           </div>
+          <script
+            async
+            src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3975856365207951"
+            crossorigin="anonymous"
+          ></script>
         </motion.div>
 
         {/*  */}
@@ -234,7 +237,5 @@ function GeothermalNew() {
     </>
   );
 }
-
-
 
 export default GeothermalNew;

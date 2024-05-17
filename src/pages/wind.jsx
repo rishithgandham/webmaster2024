@@ -1,8 +1,7 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+import React from "react";
+import { motion } from "framer-motion";
 
-
-import { InteractiveTabsWind } from '../components/InteractiveTabs';
+import { InteractiveTabsWind } from "../components/InteractiveTabs";
 const variants = {
   hidden: { opacity: 0, y: 50 },
   visible: { opacity: 1, y: 0, transition: { duration: 1 } },
@@ -32,7 +31,7 @@ function WindNew() {
             ></img>
           </div>
 
-          <InteractiveTabsWind/>
+          <InteractiveTabsWind />
 
           {/* overview */}
           <div className="text-3xl font-bold pt-10 ">Overview</div>
@@ -144,7 +143,9 @@ function WindNew() {
 
             {/* grid connected */}
             <div>
-              <div className="text-2xl font-bold  mt-10">Grid-connected Systems</div>
+              <div className="text-2xl font-bold  mt-10">
+                Grid-connected Systems
+              </div>
               <div className="text-lg font-semibold pt-10">
                 Small wind energy turbines can be connected to external
                 electricity systems like the grid. This makes it so that you can
@@ -256,6 +257,11 @@ function WindNew() {
               className="rounded-3xl aspect-video  w-5/6"
             ></iframe>
           </div>
+          <script
+            async
+            src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3975856365207951"
+            crossorigin="anonymous"
+          ></script>
         </motion.div>
 
         {/*  */}

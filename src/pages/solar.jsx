@@ -1,5 +1,5 @@
-import { motion } from 'framer-motion';
-import React, { useEffect } from 'react';
+import { motion } from "framer-motion";
+import React, { useEffect } from "react";
 
 const variants = {
   hidden: { opacity: 0, y: 50 },
@@ -15,7 +15,7 @@ const Solar = () => {
         window.scroll({
           top: 0,
           left: 0,
-          behavior: 'auto',
+          behavior: "auto",
         });
       } catch (error) {
         // just a fallback for older browsers
@@ -37,7 +37,7 @@ const Solar = () => {
           <div className="title text-4xl font-extrabold">
             Solar Energy For Homes
             <div className="relative hidden md:block rounded-full mt-10 w-96 text-xs leading-6 ring-1 ring-white py-[2px] px-4 hover:scale-[102%] transition-all ease-in-out ">
-              Announcing our solar energy calculator{' '}
+              Announcing our solar energy calculator{" "}
               <a href="/calculator" className={`font-semibold green-gradient`}>
                 <span className="absolute inset-0" aria-hidden="true" />
                 Try it out! <span aria-hidden="true">&rarr;</span>
@@ -231,8 +231,12 @@ const Solar = () => {
               className="rounded-3xl aspect-video  w-5/6"
             ></iframe>
           </div>
+          <script
+            async
+            src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3975856365207951"
+            crossorigin="anonymous"
+          ></script>
         </motion.div>
-        
       </main>
     </>
   );
