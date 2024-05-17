@@ -121,6 +121,8 @@ function EnergyTypes() {
           </>
         ))}
       </div>
+      <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3975856365207951"
+     crossorigin="anonymous"></script>
     </main>
   );
 }
