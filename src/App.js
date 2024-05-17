@@ -56,7 +56,7 @@ function App() {
             <div>
               <div className="text-3xl font-bold text-center">Overview</div>
               <div className="text-lg font-semibold pt-10 text-center">
-                Green energy for homes is all about using clean and sustainable
+                green energy for homes is all about using clean and sustainable
                 sources like sunlight, the wind, and the earth's heat to power
                 household activities. It's like making a smart choice for the
                 environment and our homes. For example, installing solar panels
